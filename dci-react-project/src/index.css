@@ -1,3 +1,4 @@
+/* ignore this error */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,7 +34,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(135deg, #18181b, #1f1f23);
+  background: linear-gradient(135deg, #ff00f2, #0099ff);
 }
 
 h1 {
