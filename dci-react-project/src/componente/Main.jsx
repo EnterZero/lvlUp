@@ -2,21 +2,39 @@ import { Carousel } from "@material-tailwind/react";
 
 export default function Main() {
   return (
-    <Carousel style={{ height: "93.4 vh" }}>
-      <img
-        src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+    <Carousel
+      style={{
+        height: "93.4vh",
+        backgroundColor: "#0e0e10",
+      }}
+      loop={true} // Aktiviere die Endlosschleife
+      responsive={{
+        // Passe die Anzahl der Slides pro Ansicht basierend auf der Bildschirmgröße an
+        "640": {
+          slidesPerView: 1, // Bei Bildschirmen mit einer Breite von weniger als 640px nur eine Slide anzeigen
+        },
+        "768": {
+          slidesPerView: 2, // Bei Bildschirmen mit einer Breite von weniger als 768px zwei Slides anzeigen
+        },
+        "1024": {
+          slidesPerView: 3, // Bei Bildschirmen mit einer Breite von weniger als 1024px drei Slides anzeigen
+        },
+      }}
+    >
+      <img style={{ marginTop: '270px' }}
+        src="https://gaming-cdn.com/images/products/9575/616x353/helldivers-2-pc-game-steam-europe-cover.jpg"
         alt="image 1"
-        className="h-full w-full object-cover"
+        className="w-600 object-cover mx-auto"
       />
-      <img
-        src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+      <img style={{ marginTop: '270px' }}
+        src="https://gaming-cdn.com/images/products/15086/616x353/horizon-forbidden-west-complete-edition-complete-edition-pc-game-steam-europe-cover.jpg"
         alt="image 2"
-        className="h-full w-full object-cover"
+        className="w-600 object-cover mx-auto"
       />
-      <img
-        src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+      <img style={{ marginTop: '270px' }}
+        src="https://gaming-cdn.com/images/products/442/616x353/minecraft-java-and-bedrock-edition-pc-game-cover.jpg"
         alt="image 3"
-        className="h-full w-full object-cover"
+        className="w-600 object-cover mx-auto"
       />
     </Carousel>
   );
