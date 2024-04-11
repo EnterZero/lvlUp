@@ -10,6 +10,7 @@ const games = [
         description: 'A dark and emotional action-adventure game set in plague-ridden medieval France.',
         price: 39.99,
         availability: 'sofort verfügbar',
+        // eslint-disable-next-line no-undef
         image: require('./src/pics/a-plague-tale-innocence.webp').default
     },
     {   /* Checked */
@@ -22,6 +23,7 @@ const games = [
         description: 'A classic real-time strategy game remastered with enhanced graphics and new content.',
         price: 19.99,
         availability: 'sofort verfügbar',
+        // eslint-disable-next-line no-undef
         image: require('./src/pics/age-of-empires.webp').default
     },
     {   /* Checked */
@@ -550,6 +552,7 @@ const games = [
         description: 'Join treasure hunter Nathan Drake on a globe-trotting adventure to uncover ancient mysteries and lost treasures.',
         price: 19.99,
         availability: 'sofort verfügbar',
+        // eslint-disable-next-line no-undef
         image: require('./src/pics/uncharted.webp').default
     },
 ];
