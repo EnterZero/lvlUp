@@ -1,6 +1,8 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import  { useState } from 'react';
+
 
 const navigation = [
   // { name: 'Dashboard', href: '#', current: true },
@@ -14,6 +16,9 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+
+
+  const [searchText, setSearchText] = useState('test');
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -56,7 +61,7 @@ export default function Navbar() {
                       </a>
                     ))}
                     <div className="relative mr-6 my-2">
-                      <input type="search" className="text-center bg-purple-white shadow rounded border-0 p-0.5" placeholder="Search for game" />
+                      <input value={searchText} type="search" className="text-center bg-purple-white shadow rounded border-0 p-0.5" placeholder="Search for game" />
                       <div className="absolute pin-r pin-t text-purple-lighter">
 
 
