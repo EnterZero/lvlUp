@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import games from "../../../dev/data";
 
 const navigation = [
   // { name: 'Dashboard', href: '#', current: true },
@@ -182,7 +183,7 @@ export default function Navbar() {
           </>
         )}
       </Disclosure>
-      <p>{searchText}</p>
+      <p>{`There are ${games.length} games.`}</p>
     </>
   );
 }

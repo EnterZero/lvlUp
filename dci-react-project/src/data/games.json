@@ -1,0 +1,91 @@
+[
+	{
+		"id": 1,
+		"title": "A Plague Tale: Innocence",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Action",
+			"Adventure"
+		],
+		"releaseYear": 2019,
+		"developer": "Asobo Studio",
+		"description": "A dark and emotional action-adventure game set in plague-ridden medieval France.",
+		"price": 39.99,
+		"availability": "sofort verfügbar",
+		"image": "a-plague-tale-innocence"
+	},
+	{
+		"id": 2,
+		"title": "Age of Empires II: Definitive Edition",
+		"platforms": [
+			"PC"
+		],
+		"genre": [
+			"Strategy"
+		],
+		"releaseYear": 2019,
+		"developer": "Forgotten Empires",
+		"description": "A classic real-time strategy game remastered with enhanced graphics and new content.",
+		"price": 19.99,
+		"availability": "sofort verfügbar",
+		"image": "a-plague-tale-innocence"
+	},
+	{
+		"id": 3,
+		"title": "Alone in the Dark",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Survival Horror"
+		],
+		"releaseYear": 2024,
+		"developer": "Infogrames",
+		"description": "One of the pioneering survival horror games that set the standard for the genre.",
+		"price": 59.99,
+		"availability": "sofort verfügbar",
+		"image": "a-plague-tale-innocence"
+	},
+	{
+		"id": 4,
+		"title": "Among Us",
+		"platforms": [
+			"PC",
+			"Mobile"
+		],
+		"genre": [
+			"Social Deduction"
+		],
+		"releaseYear": 2018,
+		"developer": "InnerSloth",
+		"description": "A multiplayer game where crewmates try to complete tasks while impostors try to eliminate them.",
+		"price": 4.99,
+		"availability": "sofort verfügbar",
+		"image": "a-plague-tale-innocence"
+	},
+	{
+		"id": 5,
+		"title": "Assassin's Creed Valhalla: Dawn of Ragnarök",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Action",
+			"Adventure"
+		],
+		"releaseYear": 2022,
+		"developer": "Ubisoft",
+		"description": "Embark on a new journey as a Viking warrior in the latest installment of the Assassin's Creed series.",
+		"price": 59.99,
+		"availability": "sofort verfügbar",
+		"image": "a-plague-tale-innocence"
+	}
+]
