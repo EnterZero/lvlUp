@@ -1,11 +1,10 @@
+import React, { useState } from "react";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
-import games from "../../../dev/data";
+import games from "../data/games.json";
 
 const navigation = [
-  // { name: 'Dashboard', href: '#', current: true },
   { name: "Shop", href: "#", current: false },
   { name: "About", href: "#", current: false },
   { name: "Contact", href: "#", current: false },
@@ -16,71 +15,86 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
-  const [searchText, setSearchText] = useState("test");
+  const [searchText, setSearchText] = useState("");
 
   const handleSearchTextChange = (e) => {
     setSearchText(e.target.value);
   };
 
+  const filteredGames = games.filter((game) =>
+    game.title.toLowerCase().includes(searchText.toLowerCase())
+  );
+
   return (
     <>
-      {" "}
       <Disclosure as="nav" className="bg-gray-800">
         {({ open }) => (
           <>
+            {/* Navbar content */}
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
               <div className="relative flex h-16 items-center justify-between">
+                {/* Mobile menu button */}
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  {/* Mobile menu button*/}
-                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <Disclosure.Button
+                    className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  >
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                      <XMarkIcon
+                        className="block h-6 w-6"
+                        aria-hidden="true"
+                      />
                     ) : (
-                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                      <Bars3Icon
+                        className="block h-6 w-6"
+                        aria-hidden="true"
+                      />
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                  <div className="flex flex-shrink-0 items-center">
-                    <img
-                      className="h-8 w-auto"
-                      src="https://www.pngall.com/wp-content/uploads/5/Laboratory-Flask-Glass-PNG-Picture.png"
-                      alt="LevelUp"
-                    />
-                  </div>
-                  <div className="hidden sm:ml-6 sm:block">
-                    <div className="flex space-x-4 items-center">
-                      {navigation.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          className={classNames(
-                            item.current
-                              ? "bg-gray-900 text-white"
-                              : "text-gray-300 hover:bg-green-700 hover:text-white",
-                            "rounded-md px-3 py-2 text-sm font-medium"
-                          )}
-                          aria-current={item.current ? "page" : undefined}
-                        >
-                          {item.name}
-                        </a>
-                      ))}
-                      <div className="relative mr-6 my-2">
-                        <input
-                          value={searchText}
-                          onChange={(e) => handleSearchTextChange(e)}
-                          type="search"
-                          className="text-center bg-purple-white shadow rounded border-0 p-0.5"
-                          placeholder="Search for game"
-                        />
-                        <div className="absolute pin-r pin-t text-purple-lighter"></div>
-                      </div>
+                {/* Logo */}
+                <div className="flex flex-shrink-0 items-center">
+                  <img
+                    className="h-8 w-auto"
+                    src="https://www.pngall.com/wp-content/uploads/5/Laboratory-Flask-Glass-PNG-Picture.png"
+                    alt="LevelUp"
+                  />
+                </div>
+                {/* Navbar links */}
+                <div className="hidden sm:ml-6 sm:block">
+                  <div className="flex space-x-4 items-center">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-300 hover:bg-green-700 hover:text-white",
+                          "rounded-md px-3 py-2 text-sm font-medium"
+                        )}
+                        aria-current={item.current ? "page" : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                    {/* Search input */}
+                    <div className="relative mr-6 my-2">
+                      <input
+                        value={searchText}
+                        onChange={handleSearchTextChange}
+                        type="search"
+                        className="text-center bg-purple-white shadow rounded border-0 p-0.5"
+                        placeholder="Search for game"
+                      />
+                      <div className="absolute pin-r pin-t text-purple-lighter"></div>
                     </div>
                   </div>
                 </div>
+                {/* Notification Bell and Profile dropdown */}
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                  {/* Notification Bell */}
                   <button
                     type="button"
                     className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -89,9 +103,9 @@ export default function Navbar() {
                     <span className="sr-only">View notifications</span>
                     <BellIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
-
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
+                    {/* Profile image button */}
                     <div>
                       <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span className="absolute -inset-1.5" />
@@ -103,6 +117,7 @@ export default function Navbar() {
                         />
                       </Menu.Button>
                     </div>
+                    {/* Profile dropdown items */}
                     <Transition
                       as={Fragment}
                       enter="transition ease-out duration-100"
@@ -158,8 +173,7 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            {/* input search */}
-
+            {/* Mobile menu */}
             <Disclosure.Panel className="sm:hidden">
               <div className="space-y-1 px-2 pb-3 pt-2">
                 {navigation.map((item) => (
@@ -183,7 +197,23 @@ export default function Navbar() {
           </>
         )}
       </Disclosure>
-      <p>{`There are ${games.length} games.`}</p>
+      {/* Render filtered games */}
+      <div className="grid grid-cols-2 gap-4">
+  {filteredGames.map((game) => (
+    <div key={game.id} className="group rounded-lg overflow-hidden relative">
+      <img
+        src={`images/games/${game.image}.webp`}
+        alt={game.title}
+        className="w-full h-auto rounded-lg group-hover:scale-110 transition-transform duration-300"
+      />
+      <div className="p-4 bg-gray-00 bg-opacity-90 absolute inset-0 flex flex-col justify-end">
+        <h3 className="text-lg font-semibold text-white">{game.title}</h3>
+      </div>
+    </div>
+  ))}
+</div>
+
+
     </>
   );
 }
