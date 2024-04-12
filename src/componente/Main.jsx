@@ -5,7 +5,7 @@ export default function Main() {
     <Carousel
       style={{
         height: "93.4vh",
-        backgroundColor: "#0e0e10",
+        backgroundColor: '#212121',
       }}
       loop={true} // Aktiviere die Endlosschleife
       responsive={{

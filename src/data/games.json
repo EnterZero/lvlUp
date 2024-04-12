@@ -50,7 +50,7 @@
 		"description": "One of the pioneering survival horror games that set the standard for the genre.",
 		"price": 59.99,
 		"availability": "sofort verfügbar",
-		"image": "among-us"
+		"image": "alone-in-the-dark"
 	},
 	{
 		"id": 4,
@@ -67,7 +67,7 @@
 		"description": "A multiplayer game where crewmates try to complete tasks while impostors try to eliminate them.",
 		"price": 4.99,
 		"availability": "sofort verfügbar",
-		"image": "alone-in-the-dark"
+		"image": "among-us"
 	},
 	{
 		"id": 5,
@@ -89,129 +89,134 @@
 		"image": "assassin-s-creed-valhalla-die-zeichen-ragnaroeks"
 	},
 	{
-		"id":6,
-		"title":"Avatar: Frontiers of Pandora",
-		"platforms":[
-		  "PC",
-		  "PlayStation",
-		  "Xbox"
+		"id": 6,
+		"title": "Avatar: Frontiers of Pandora",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
 		],
-		"genre":[
-		  "Action",
-		  "Adventure"
+		"genre": [
+			"Action",
+			"Adventure"
 		],
-		"releaseYear":2023,
-		"developer":"Ubisoft",
-		"description":"Explore the beautiful yet dangerous world of Pandora in this action-adventure game based on James Cameron's Avatar universe.",
-		"price":69.99,
-		"availability":"sofort verfügbar",
-		"image":"avatar-frontiers-of-pandora"
-	  },
-	  {
-        "id": 7,
-        "title": "Call of Duty: Modern Warfare 3",
-        "platforms": ["PC", "PlayStation", "Xbox"],
-        "genre": ["First-Person Shooter"],
-        "releaseYear": 2023,
-        "developer": "Infinity Ward",
-        "description": "Experience the thrilling conclusion to the Modern Warfare trilogy as you battle through intense missions across the globe.",
-        "price": 69.99,
-        "availability": "sofort verfügbar",
-        "image": "call-of-duty-modern-warfare-iii"
-    },
+		"releaseYear": 2023,
+		"developer": "Ubisoft",
+		"description": "Explore the beautiful yet dangerous world of Pandora in this action-adventure game based on James Cameron's Avatar universe.",
+		"price": 69.99,
+		"availability": "sofort verfügbar",
+		"image": "avatar-frontiers-of-pandora"
+	},
 	{
-		"id":8,
-		"title":"Cyberpunk 2077: Ultimate Edition",
-		"platforms":[
-		  "PC",
-		  "PlayStation",
-		  "Xbox"
+		"id": 7,
+		"title": "Call of Duty: Modern Warfare 3",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
 		],
-		"genre":[
-		  "Action",
-		  "Role-Playing"
+		"genre": [
+			"First-Person Shooter"
 		],
-		"releaseYear":2020,
-		"developer":"CD Projekt Red",
-		"description":"Immerse yourself in the dystopian future of Night City in this highly anticipated open-world RPG.",
-		"price":79.99,
-		"availability":"sofort verfügbar",
-		"image":"cyberpunk-2077-ultimate-edition"
-	  },
-	  {
-		"id":9,
-		"title":"Dead by Daylight",
-		"platforms":[
-		  "PC",
-		  "PlayStation",
-		  "Xbox"
+		"releaseYear": 2023,
+		"developer": "Infinity Ward",
+		"description": "Experience the thrilling conclusion to the Modern Warfare trilogy as you battle through intense missions across the globe.",
+		"price": 69.99,
+		"availability": "sofort verfügbar",
+		"image": "call-of-duty-modern-warfare-iii"
+	},
+	{
+		"id": 8,
+		"title": "Cyberpunk 2077: Ultimate Edition",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
 		],
-		"genre":[
-		  "Survival Horror"
+		"genre": [
+			"Action",
+			"Role-Playing"
 		],
-		"releaseYear":2016,
-		"developer":"Behaviour Interactive",
-		"description":"A multiplayer horror game where one player takes on the role of a killer while the others try to escape.",
-		"price":24.99,
-		"availability":"sofort verfügbar",
-		"image":"dead-by-daylight"
-	  },
-	  {
-		"id":10,
-		"title":"Destiny 2: Die Finale",
-		"platforms":[
-		  "PC",
-		  "PlayStation",
-		  "Xbox"
+		"releaseYear": 2020,
+		"developer": "CD Projekt Red",
+		"description": "Immerse yourself in the dystopian future of Night City in this highly anticipated open-world RPG.",
+		"price": 79.99,
+		"availability": "sofort verfügbar",
+		"image": "cyberpunk-2077-ultimate-edition"
+	},
+	{
+		"id": 9,
+		"title": "Dead by Daylight",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
 		],
-		"genre":[
-		  "First-Person Shooter",
-		  "MMORPG"
+		"genre": [
+			"Survival Horror"
 		],
-		"releaseYear":2023,
-		"developer":"Bungie",
-		"description":"Continue your epic journey as a Guardian in the ultimate battle against the Darkness in this thrilling sequel.",
-		"price":49.99,
-		"availability":"ausverkauft",
-		"image":"destiny-2-die-finale"
-	  },
-	  {
-		"id":11,
-		"title":"Dragon's Dogma 2",
-		"platforms":[
-		  "PC",
-		  "PlayStation",
-		  "Xbox"
+		"releaseYear": 2016,
+		"developer": "Behaviour Interactive",
+		"description": "A multiplayer horror game where one player takes on the role of a killer while the others try to escape.",
+		"price": 24.99,
+		"availability": "sofort verfügbar",
+		"image": "dead-by-daylight"
+	},
+	{
+		"id": 10,
+		"title": "Destiny 2: The Final Shape",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
 		],
-		"genre":[
-		  "Action",
-		  "Role-Playing"
+		"genre": [
+			"First-Person Shooter",
+			"MMORPG"
 		],
-		"releaseYear":2024,
-		"developer":"Capcom",
-		"description":"Embark on an epic adventure in a vast open world filled with mythical creatures and ancient mysteries.",
-		"price":49.99,
-		"availability":"sofort verfügbar",
-		"image":"dragon-s-dogma-2"
-	  },
-	  {
-		"id":12,
-		"title":"Elden Ring",
-		"platforms":[
-		  "PC",
-		  "PlayStation",
-		  "Xbox"
+		"releaseYear": 2023,
+		"developer": "Bungie",
+		"description": "Continue your epic journey as a Guardian in the ultimate battle against the Darkness in this thrilling sequel.",
+		"price": 49.99,
+		"availability": "ausverkauft",
+		"image": "destiny-2-die-finale"
+	},
+	{
+		"id": 11,
+		"title": "Dragon's Dogma 2",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
 		],
-		"genre":[
-		  "Action",
-		  "Role-Playing"
+		"genre": [
+			"Action",
+			"Role-Playing"
 		],
-		"releaseYear":2022,
-		"developer":"FromSoftware",
-		"description":"Discover the secrets of the shattered world of Elden Ring in this highly anticipated action RPG.",
-		"price":59.99,
-		"availability":"sofort verfügbar",
-		"image":"elden-ring"
-	  }
-	
+		"releaseYear": 2024,
+		"developer": "Capcom",
+		"description": "Embark on an epic adventure in a vast open world filled with mythical creatures and ancient mysteries.",
+		"price": 49.99,
+		"availability": "sofort verfügbar",
+		"image": "dragon-s-dogma-2"
+	},
+	{
+		"id": 12,
+		"title": "Elden Ring Shadow of the Erdtree",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Action",
+			"Role-Playing"
+		],
+		"releaseYear": 2022,
+		"developer": "FromSoftware",
+		"description": "Discover the secrets of the shattered world of Elden Ring in this highly anticipated action RPG.",
+		"price": 59.99,
+		"availability": "sofort verfügbar",
+		"image": "elden-ring"
+	}
 ]

@@ -198,20 +198,20 @@ export default function Navbar() {
         )}
       </Disclosure>
       {/* Render filtered games */}
-      <div className="grid grid-cols-2 gap-4">
-  {filteredGames.map((game) => (
-    <div key={game.id} className="group rounded-lg overflow-hidden relative">
-      <img
-        src={`images/games/${game.image}.webp`}
-        alt={game.title}
-        className="w-full h-auto rounded-lg group-hover:scale-110 transition-transform duration-300"
-      />
-      <div className="p-4 bg-gray-00 bg-opacity-90 absolute inset-0 flex flex-col justify-end">
-        <h3 className="text-lg font-semibold text-white">{game.title}</h3>
+      <div className="grid grid-cols-2 gap-4 bg-gray-900">
+        {filteredGames.map((game) => (
+          <div key={game.id} className="group rounded-lg overflow-hidden relative">
+            <img
+              src={`images/games/${game.image}.webp`}
+              alt={game.title}
+              className="w-full h-auto rounded-lg group-hover:scale-110 transition-transform duration-300"
+            />
+            <div className="p-4 bg-gray-00 bg-opacity-90 absolute inset-0 flex flex-col justify-end">
+              <h3 className="text-lg font-semibold text-white" style={{ textShadow: '1px 1px 3px #000' }}>{game.title}</h3>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
 
 
     </>
