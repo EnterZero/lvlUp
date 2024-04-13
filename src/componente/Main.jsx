@@ -5,7 +5,7 @@ export default function Main() {
     <Carousel
       style={{
         height: "93.4vh",
-        backgroundColor: '#212121',
+        backgroundColor: '#ea580c',
       }}
       loop={true} // Aktiviere die Endlosschleife
       responsive={{
@@ -24,17 +24,17 @@ export default function Main() {
       <img style={{ marginTop: '270px' }}
         src="https://gaming-cdn.com/images/products/9575/616x353/helldivers-2-pc-game-steam-europe-cover.jpg"
         alt="image 1"
-        className="w-600 object-cover mx-auto"
+        className="w-600 object-cover mx-auto rounded-lg"
       />
       <img style={{ marginTop: '270px' }}
         src="https://gaming-cdn.com/images/products/15086/616x353/horizon-forbidden-west-complete-edition-complete-edition-pc-game-steam-europe-cover.jpg"
         alt="image 2"
-        className="w-600 object-cover mx-auto"
+        className="w-600 object-cover mx-auto rounded-lg"
       />
       <img style={{ marginTop: '270px' }}
         src="https://gaming-cdn.com/images/products/442/616x353/minecraft-java-and-bedrock-edition-pc-game-cover.jpg"
         alt="image 3"
-        className="w-600 object-cover mx-auto"
+        className="w-600 object-cover mx-auto rounded-lg"
       />
     </Carousel>
   );

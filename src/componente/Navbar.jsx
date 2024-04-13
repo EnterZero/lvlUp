@@ -27,7 +27,12 @@ export default function Navbar() {
 
   return (
     <>
-      <Disclosure as="nav" className="bg-gray-800">
+      <style>{`
+        body {
+          background-color: #000;
+        }
+      `}</style>
+      <Disclosure as="nav" className="bg-gray-900 shadow mb-8 fixed w-full z-10 top-0">
         {({ open }) => (
           <>
             {/* Navbar content */}
@@ -36,7 +41,7 @@ export default function Navbar() {
                 {/* Mobile menu button */}
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   <Disclosure.Button
-                    className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                    className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-orange-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                   >
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Open main menu</span>
@@ -71,7 +76,7 @@ export default function Navbar() {
                         className={classNames(
                           item.current
                             ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-green-700 hover:text-white",
+                            : "text-gray-300 hover:bg-orange-600 hover:text-white",
                           "rounded-md px-3 py-2 text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
@@ -85,7 +90,7 @@ export default function Navbar() {
                         value={searchText}
                         onChange={handleSearchTextChange}
                         type="search"
-                        className="text-center bg-purple-white shadow rounded border-0 p-0.5"
+                        className="text-center bg-purple-white shadow-md rounded border-0 p-0.5 focus:outline-none focus:ring-2 focus:ring-orange-600"
                         placeholder="Search for game"
                       />
                       <div className="absolute pin-r pin-t text-purple-lighter"></div>
@@ -97,7 +102,7 @@ export default function Navbar() {
                   {/* Notification Bell */}
                   <button
                     type="button"
-                    className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
                     <span className="absolute -inset-1.5" />
                     <span className="sr-only">View notifications</span>
@@ -107,7 +112,7 @@ export default function Navbar() {
                   <Menu as="div" className="relative ml-3">
                     {/* Profile image button */}
                     <div>
-                      <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                      <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span className="absolute -inset-1.5" />
                         <span className="sr-only">Open user menu</span>
                         <img
@@ -133,7 +138,7 @@ export default function Navbar() {
                             <a
                               href="#"
                               className={classNames(
-                                active ? "bg-gray-100" : "",
+                                active ? "bg-orange-600" : "",
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
@@ -146,7 +151,7 @@ export default function Navbar() {
                             <a
                               href="#"
                               className={classNames(
-                                active ? "bg-gray-100" : "",
+                                active ? "bg-orange-600" : "",
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
@@ -159,7 +164,7 @@ export default function Navbar() {
                             <a
                               href="#"
                               className={classNames(
-                                active ? "bg-gray-100" : "",
+                                active ? "bg-orange-600" : "",
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
@@ -198,16 +203,17 @@ export default function Navbar() {
         )}
       </Disclosure>
       {/* Render filtered games */}
-      <div className="grid grid-cols-2 gap-4 bg-gray-900">
+      <div className="mt-20 mb-3 bg bg-lime grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols4 gap-6 bg-gray-950">
         {filteredGames.map((game) => (
-          <div key={game.id} className="group rounded-lg overflow-hidden relative">
+          <div key={game.id} className="group rounded-lg overflow-hidden relative border border-orange-600 shadow-md hover:shadow-lg">
             <img
               src={`images/games/${game.image}.webp`}
               alt={game.title}
               className="w-full h-auto rounded-lg group-hover:scale-110 transition-transform duration-300"
             />
-            <div className="p-4 bg-gray-00 bg-opacity-90 absolute inset-0 flex flex-col justify-end">
-              <h3 className="text-lg font-semibold text-white" style={{ textShadow: '1px 1px 3px #000' }}>{game.title}</h3>
+            <div className="p-4 bg-gray-800 bg-opacity-20 absolute inset-0 flex flex-col justify-end">
+              <h3 className="text-lg font-semibold text-white hover:text-orange-600 transition-colors duration-300" style={{ textShadow: '1px 1px 3px #000' }}>{game.title}</h3>
+              <h3 className="text-lg font-semibold text-white hover:text-orange-600 transition-colors duration-300" style={{ textShadow: '1px 1px 3px #000' }}>{game.price} Euro</h3>
             </div>
           </div>
         ))}
