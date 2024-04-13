@@ -218,5 +218,597 @@
 		"price": 59.99,
 		"availability": "sofort verfügbar",
 		"image": "elden-ring"
+	},
+	{
+		"id": 13,
+		"title": "Fallout 4",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Action",
+			"Role-Playing"
+		],
+		"releaseYear": 2015,
+		"developer": "Bethesda Game Studios",
+		"description": "Explore the post-apocalyptic wasteland of Boston and shape its future in this epic open-world RPG.",
+		"price": 29.99,
+		"availability": "sofort verfügbar",
+		"image": "fallout-4"
+	},
+	{
+		"id": 14,
+		"title": "Farming Simulator 22",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Simulation"
+		],
+		"releaseYear": 2021,
+		"developer": "GIANTS Software",
+		"description": "Build and manage your own farm, grow crops, raise livestock, and expand your agricultural empire.",
+		"price": 39.99,
+		"availability": "sofort verfügbar",
+		"image": "farming-simulator-22"
+	},
+	{
+		"id": 15,
+		"title": "Final Fantasy XVI",
+		"platforms": [
+			"PlayStation"
+		],
+		"genre": [
+			"Role-Playing"
+		],
+		"releaseYear": 2023,
+		"developer": "Square Enix",
+		"description": "Enter a new world of fantasy and adventure in the latest installment of the legendary Final Fantasy series.",
+		"price": 59.99,
+		"availability": "ausverkauft",
+		"image": "final-fantasy-xvi"
+	},
+	{
+		"id": 16,
+		"title": "Fortnite: Transformers Pack",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox",
+			"Mobile"
+		],
+		"genre": [
+			"Battle Royale"
+		],
+		"releaseYear": 2023,
+		"developer": "Epic Games",
+		"description": "Join the battle as iconic Transformers characters in the ever-evolving world of Fortnite.",
+		"price": 24.99,
+		"availability": "sofort verfügbar",
+		"image": "fortnite-transformers"
+	},
+	{
+		"id": 17,
+		"title": "Forza Horizon 5",
+		"platforms": [
+			"Xbox"
+		],
+		"genre": [
+			"Racing"
+		],
+		"releaseYear": 2021,
+		"developer": "Playground Games",
+		"description": "Experience the thrill of open-world racing and explore stunning landscapes in this acclaimed racing game.",
+		"price": 49.99,
+		"availability": "sofort verfügbar",
+		"image": "forza-horizon"
+	},
+	{
+		"id": 18,
+		"title": "Genshin Impact",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Mobile"
+		],
+		"genre": [
+			"Action",
+			"Role-Playing"
+		],
+		"releaseYear": 2020,
+		"developer": "miHoYo",
+		"description": "Embark on an epic journey across the magical world of Teyvat and uncover its secrets in this open-world RPG.",
+		"price": 0,
+		"availability": "sofort verfügbar",
+		"image": "genshin-impact"
+	},
+	{
+		"id": 19,
+		"title": "Ghost of Tsushima",
+		"platforms": [
+			"PlayStation"
+		],
+		"genre": [
+			"Action",
+			"Adventure"
+		],
+		"releaseYear": 2020,
+		"developer": "Sucker Punch Productions",
+		"description": "Become a samurai warrior and defend the island of Tsushima from Mongol invaders in this breathtaking open-world adventure.",
+		"price": 49.99,
+		"availability": "sofort verfügbar",
+		"image": "ghost-of-tsushima"
+	},
+	{
+		"id": 20,
+		"title": "God of War Ragnarök",
+		"platforms": [
+			"PlayStation"
+		],
+		"genre": [
+			"Action",
+			"Adventure"
+		],
+		"releaseYear": 2022,
+		"developer": "Santa Monica Studio",
+		"description": "Join Kratos and Atreus on a new adventure in the realms of Norse mythology in the highly anticipated sequel to God of War.",
+		"price": 59.99,
+		"availability": "ausverkauft",
+		"image": "god-of-war-ragnaroek"
+	},
+	{
+		"id": 21,
+		"title": "Gran Turismo 7",
+		"platforms": [
+			"PlayStation"
+		],
+		"genre": [
+			"Racing",
+			"Simulation"
+		],
+		"releaseYear": 2022,
+		"developer": "Polyphony Digital",
+		"description": "Experience the ultimate racing simulation with stunning visuals and realistic physics in the latest installment of the Gran Turismo series.",
+		"price": 69.99,
+		"availability": "sofort verfügbar",
+		"image": "gran-turismo-7"
+	},
+	{
+		"id": 22,
+		"title": "Grand Theft Auto V",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Action",
+			"Adventure"
+		],
+		"releaseYear": 2013,
+		"developer": "Rockstar Games",
+		"description": "Explore the sprawling open world of Los Santos and embark on a life of crime in this critically acclaimed action-adventure game.",
+		"price": 29.99,
+		"availability": "sofort verfügbar",
+		"image": "grand-theft-auto-v"
+	},
+	{
+		"id": 23,
+		"title": "Hellblade: Senua's Sacrifice",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Action",
+			"Adventure"
+		],
+		"releaseYear": 2017,
+		"developer": "Ninja Theory",
+		"description": "Journey into the depths of Viking hell and experience the haunting story of Senua in this atmospheric action-adventure game.",
+		"price": 24.99,
+		"availability": "sofort verfügbar",
+		"image": "hellblade"
+	},
+	{
+		"id": 24,
+		"title": "Helldivers 2",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Twin-Stick Shooter",
+			"Co-op"
+		],
+		"releaseYear": 2024,
+		"developer": "Arrowhead Game Studios",
+		"description": "Join an elite squad of soldiers and engage in intense cooperative battles against alien threats in this top-down shooter.",
+		"price": 39.99,
+		"availability": "sofort verfügbar",
+		"image": "helldivers-2"
+	},
+	{
+		"id": 25,
+		"title": "Horizon Forbidden West",
+		"platforms": [
+			"PlayStation"
+		],
+		"genre": [
+			"Action",
+			"Adventure"
+		],
+		"releaseYear": 2022,
+		"developer": "Guerrilla Games",
+		"description": "Embark on a journey to the mysterious Forbidden West and uncover the secrets of a post-apocalyptic world.",
+		"price": 59.99,
+		"availability": "sofort verfügbar",
+		"image": "horizon-forbidden-west"
+	},
+	{
+		"id": 26,
+		"title": "League of Legends",
+		"platforms": [
+			"PC"
+		],
+		"genre": [
+			"MOBA"
+		],
+		"releaseYear": 2009,
+		"developer": "Riot Games",
+		"description": "Join millions of players in the world's most popular multiplayer online battle arena game and compete for glory.",
+		"price": 0,
+		"availability": "sofort verfügbar",
+		"image": "league-of-legends"
+	},
+	{
+		"id": 27,
+		"title": "Metal Gear Solid: Master Collection",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Stealth",
+			"Action"
+		],
+		"releaseYear": 2023,
+		"developer": "Konami",
+		"description": "Relive the iconic stealth-action adventures of Solid Snake with remastered editions of the Metal Gear Solid series.",
+		"price": 59.99,
+		"availability": "sofort verfügbar",
+		"image": "metal-gear-solid"
+	},
+	{
+		"id": 28,
+		"title": "Minecraft",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox",
+			"Mobile"
+		],
+		"genre": [
+			"Sandbox",
+			"Survival"
+		],
+		"releaseYear": 2011,
+		"developer": "Mojang Studios",
+		"description": "Explore, build, and survive in a blocky world filled with endless possibilities in this iconic sandbox game.",
+		"price": 19.99,
+		"availability": "sofort verfügbar",
+		"image": "minecraft"
+	},
+	{
+		"id": 29,
+		"title": "Monster Hunter: World",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Action",
+			"Role-Playing"
+		],
+		"releaseYear": 2018,
+		"developer": "Capcom",
+		"description": "Embark on epic hunts and face off against giant monsters in this critically acclaimed action RPG.",
+		"price": 39.99,
+		"availability": "sofort verfügbar",
+		"image": "monster-hunter-world"
+	},
+	{
+		"id": 30,
+		"title": "Princess Peach: Showtime",
+		"platforms": [
+			"Nintendo Switch"
+		],
+		"genre": [
+			"Platformer"
+		],
+		"releaseYear": 2024,
+		"developer": "Nintendo",
+		"description": "Join Princess Peach on an exciting adventure to reclaim the Mushroom Kingdom in this charming platformer.",
+		"price": 49.99,
+		"availability": "ausverkauft",
+		"image": "princess-peach-showtime"
+	},
+	{
+		"id": 31,
+		"title": "Ranch Simulator",
+		"platforms": [
+			"PC"
+		],
+		"genre": [
+			"Simulation"
+		],
+		"releaseYear": 2021,
+		"developer": "Excalibur Games",
+		"description": "Build, manage, and expand your own ranch in this realistic farming simulation game.",
+		"price": 29.99,
+		"availability": "sofort verfügbar",
+		"image": "ranch-simulator"
+	},
+	{
+		"id": 32,
+		"title": "Resident Evil 3",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Survival Horror"
+		],
+		"releaseYear": 2020,
+		"developer": "Capcom",
+		"description": "Face terrifying enemies and uncover the truth behind the outbreak in Raccoon City in this thrilling survival horror game.",
+		"price": 39.99,
+		"availability": "sofort verfügbar",
+		"image": "resident-evil-3"
+	},
+	{
+		"id": 33,
+		"title": "Resident Evil 4",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Survival Horror"
+		],
+		"releaseYear": 2005,
+		"developer": "Capcom",
+		"description": "Experience the acclaimed survival horror classic that redefined the genre with its gripping story and intense gameplay.",
+		"price": 19.99,
+		"availability": "sofort verfügbar",
+		"image": "resident-evil-4"
+	},
+	{
+		"id": 34,
+		"title": "Silent Hill 2 Remake",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Survival Horror"
+		],
+		"releaseYear": 2023,
+		"developer": "Konami",
+		"description": "Return to the eerie town of Silent Hill in this modern remake of the survival horror masterpiece.",
+		"price": 49.99,
+		"availability": "vorbestellbar",
+		"image": "silent-hill-2"
+	},
+	{
+		"id": 35,
+		"title": "South Park: Snow Day",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"RPG"
+		],
+		"releaseYear": 2024,
+		"developer": "Ubisoft",
+		"description": "Join the foul-mouthed kids of South Park on a wacky adventure filled with humor and satire.",
+		"price": 29.99,
+		"availability": "sofort verfügbar",
+		"image": "south-park-snow-day"
+	},
+	{
+		"id": 36,
+		"title": "Star Wars Battlefront",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Action",
+			"Shooter"
+		],
+		"releaseYear": 2015,
+		"developer": "EA DICE",
+		"description": "Experience epic battles in the Star Wars universe and fight for the fate of the galaxy in this multiplayer shooter.",
+		"price": 19.99,
+		"availability": "sofort verfügbar",
+		"image": "star-wars-battlefront"
+	},
+	{
+		"id": 37,
+		"title": "Street Fighter 6",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Fighting"
+		],
+		"releaseYear": 2023,
+		"developer": "Capcom",
+		"description": "Prepare for intense battles and iconic matchups in the latest installment of the legendary fighting game series.",
+		"price": 59.99,
+		"availability": "sofort verfügbar",
+		"image": "street-fighter-6"
+	},
+	{
+		"id": 38,
+		"title": "Suicide Squad",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Action",
+			"Adventure"
+		],
+		"releaseYear": 2024,
+		"developer": "Rocksteady Studios",
+		"description": "Join the Suicide Squad on a dangerous mission to save the world from a threat unlike any other.",
+		"price": 49.99,
+		"availability": "sofort verfügbar",
+		"image": "suicide-squad"
+	},
+	{
+		"id": 39,
+		"title": "Super Mario Party (Switch Version)",
+		"platforms": [
+			"Nintendo Switch"
+		],
+		"genre": [
+			"Party"
+		],
+		"releaseYear": 2021,
+		"developer": "Nintendo",
+		"description": "Gather your friends and family for a fun-filled party experience with classic Mario characters and minigames.",
+		"price": 49.99,
+		"availability": "sofort verfügbar",
+		"image": "super-mario-party"
+	},
+	{
+		"id": 40,
+		"title": "Tekken 7",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Fighting"
+		],
+		"releaseYear": 2017,
+		"developer": "Bandai Namco Entertainment",
+		"description": "Enter the King of Iron Fist Tournament and battle against a diverse cast of fighters in this acclaimed fighting game.",
+		"price": 29.99,
+		"availability": "sofort verfügbar",
+		"image": "tekken-7"
+	},
+	{
+		"id": 41,
+		"title": "Tekken 8",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Fighting"
+		],
+		"releaseYear": 2024,
+		"developer": "Bandai Namco Entertainment",
+		"description": "Prepare for the next evolution of the King of Iron Fist Tournament in the highly anticipated sequel to Tekken 7.",
+		"price": 59.99,
+		"availability": "sofort verfügbar",
+		"image": "tekken-8"
+	},
+	{
+		"id": 42,
+		"title": "The Elder Scrolls V: Skyrim",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Action",
+			"Role-Playing"
+		],
+		"releaseYear": 2011,
+		"developer": "Bethesda Game Studios",
+		"description": "Embark on an epic adventure in the frozen land of Skyrim and fulfill your destiny as the Dragonborn.",
+		"price": 29.99,
+		"availability": "sofort verfügbar",
+		"image": "the-elder-scrolls-v-skyrim"
+	},
+	{
+		"id": 43,
+		"title": "The Legend of Zelda: Breath of the Wild",
+		"platforms": [
+			"Nintendo Switch"
+		],
+		"genre": [
+			"Action",
+			"Adventure"
+		],
+		"releaseYear": 2017,
+		"developer": "Nintendo",
+		"description": "Explore the vast kingdom of Hyrule and uncover its secrets in this critically acclaimed open-world adventure.",
+		"price": 59.99,
+		"availability": "sofort verfügbar",
+		"image": "the-legend-of-zelda-breath-of-the-wild"
+	},
+	{
+		"id": 44,
+		"title": "The Witcher 3: Wild Hunt",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Action",
+			"Role-Playing"
+		],
+		"releaseYear": 2015,
+		"developer": "CD Projekt Red",
+		"description": "Embark on a quest of epic proportions and become a monster slayer in this critically acclaimed open-world RPG.",
+		"price": 29.99,
+		"availability": "sofort verfügbar",
+		"image": "the-witcher-3"
+	},
+	{
+		"id": 45,
+		"title": "Tomb Raider I, II, III: Remastered",
+		"platforms": [
+			"PC",
+			"PlayStation",
+			"Xbox"
+		],
+		"genre": [
+			"Action",
+			"Adventure"
+		],
+		"releaseYear": 2024,
+		"developer": "Crystal Dynamics",
+		"description": "Relive the classic adventures of Lara Croft in stunning remastered editions of the original Tomb Raider trilogy.",
+		"price": 49.99,
+		"availability": "sofort verfügbar",
+		"image": "tomb-raider-i-iii-remastered"
 	}
 ]
