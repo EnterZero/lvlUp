@@ -213,7 +213,10 @@ export default function Navbar() {
             />
             <div className="p-4 bg-gray-800 bg-opacity-20 absolute inset-0 flex flex-col justify-end">
               <h3 className="text-lg font-semibold text-white hover:text-orange-600 transition-colors duration-300" style={{ textShadow: '1px 1px 3px #000' }}>{game.title}</h3>
-              <h3 className="text-lg font-semibold text-white hover:text-orange-600 transition-colors duration-300" style={{ textShadow: '1px 1px 3px #000' }}>{game.price} Euro</h3>
+              <h3 className="text-lg font-semibold text-white hover:text-orange-600 transition-colors duration-300" style={{ textShadow: '1px 1px 3px #000' }}>
+                {game.price === 0 ? "Free to play" : `${game.price} Euro`}
+              </h3>
+
             </div>
           </div>
         ))}
