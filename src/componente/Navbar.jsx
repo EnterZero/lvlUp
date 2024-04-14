@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon, HeartIcon, ShoppingCartIcon } from "@heroicons/react/24/outline"; // Importieren Sie das ShoppingCartIcon
+import { Bars3Icon, BellIcon, XMarkIcon, HeartIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
 import games from "../data/games.json";
 
 const navigation = [
@@ -17,25 +17,7 @@ function classNames(...classes) {
 export default function Navbar() {
   const [searchText, setSearchText] = useState("");
   const [favorites, setFavorites] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0); // Zustand für den Gesamtpreis
-
-  const handleSearchTextChange = (e) => {
-    setSearchText(e.target.value);
-  };
-
-  const handleGameSelect = (gameId) => {
-    if (favorites.includes(gameId)) {
-      setFavorites(favorites.filter((id) => id !== gameId));
-    } else {
-      setFavorites([...favorites, gameId]);
-    }
-    // Berechne den Gesamtpreis neu
-    calculateTotalPrice();
-  };
-
-  const isGameSelected = (gameId) => {
-    return favorites.includes(gameId);
-  };
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const calculateTotalPrice = () => {
     let totalPrice = 0;
@@ -45,7 +27,32 @@ export default function Navbar() {
         totalPrice += selectedGame.price;
       }
     });
-    setTotalPrice(totalPrice); // Setze den Gesamtpreis-Zustand
+    setTotalPrice(totalPrice);
+  };
+
+  useEffect(() => {
+    calculateTotalPrice();
+  }, [favorites]);
+
+  const handleSearchTextChange = (e) => {
+    setSearchText(e.target.value);
+  };
+
+  const handleGameSelect = (gameId) => {
+    const isFavorite = favorites.includes(gameId);
+    let updatedFavorites = [...favorites];
+
+    if (isFavorite) {
+      updatedFavorites = favorites.filter((id) => id !== gameId);
+    } else {
+      updatedFavorites.push(gameId);
+    }
+
+    setFavorites(updatedFavorites);
+  };
+
+  const isGameSelected = (gameId) => {
+    return favorites.includes(gameId);
   };
 
   const filteredGames = games.filter((game) =>
@@ -273,7 +280,7 @@ export default function Navbar() {
         <div className="flex flex-col items-center">
           <span className="text-lg font-semibold text-orange-600 mb-2">Total Price: {totalPrice.toFixed(2)} Euro</span>
           <span className="text-sm text-gray-700">Number of games: {favorites.length}</span>
-          {/* Liste der ausgewählten Spiele und ihre Einzelpreise */}
+          {/* Listing of cart */}
           <div className="mt-2">
             {favorites.map((gameId) => {
               const selectedGame = games.find((game) => game.id === gameId);
@@ -285,7 +292,7 @@ export default function Navbar() {
               );
             })}
           </div>
-          {/* Zu Kasse gehen mit Einkaufswagen-Icon und Styles */}
+          {/* Checkout */}
           <span className="text-sm text-gray-100 mt-2 flex items-center underline hover:text-orange-600">
             <ShoppingCartIcon className="h-5 w-5 mr-1 text-orange-600" />Checkout
           </span>
