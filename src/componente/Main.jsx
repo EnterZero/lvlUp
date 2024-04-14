@@ -8,6 +8,7 @@ export default function Main() {
         backgroundColor: '#ea580c',
       }}
       loop={true} // Aktiviere die Endlosschleife
+      autoplay={true}
       responsive={{
         // Passe die Anzahl der Slides pro Ansicht basierend auf der Bildschirmgröße an
         "640": {
