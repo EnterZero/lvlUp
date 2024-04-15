@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon, HeartIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3Icon,
+  BellIcon,
+  XMarkIcon,
+  HeartIcon,
+  ShoppingCartIcon,
+} from "@heroicons/react/24/outline";
 import games from "../data/games.json";
 
 const navigation = [
@@ -66,7 +72,10 @@ export default function Navbar() {
           background-color: #000;
         }
       `}</style>
-      <Disclosure as="nav" className="bg-gray-900 shadow mb-8 fixed w-full z-10 top-0">
+      <Disclosure
+        as="nav"
+        className="bg-gray-900 shadow mb-8 fixed w-full z-10 top-0"
+      >
         {({ open }) => (
           <>
             {/* Navbar content */}
@@ -74,21 +83,13 @@ export default function Navbar() {
               <div className="relative flex h-16 items-center justify-between">
                 {/* Mobile menu button */}
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <Disclosure.Button
-                    className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-orange-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                  >
+                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-orange-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                      <XMarkIcon
-                        className="block h-6 w-6"
-                        aria-hidden="true"
-                      />
+                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                     ) : (
-                      <Bars3Icon
-                        className="block h-6 w-6"
-                        aria-hidden="true"
-                      />
+                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                     )}
                   </Disclosure.Button>
                 </div>
@@ -241,7 +242,10 @@ export default function Navbar() {
       {/* Render filtered games */}
       <div className="mt-20 mb-3 bg bg-lime grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols4 gap-6 bg-gray-950">
         {filteredGames.map((game) => (
-          <div key={game.id} className="group rounded-lg overflow-hidden relative border border-orange-600 shadow-md hover:shadow-lg">
+          <div
+            key={game.id}
+            className="group rounded-lg overflow-hidden relative border border-orange-600 shadow-md hover:shadow-lg"
+          >
             <button
               onClick={() => handleGameSelect(game.id)}
               className={classNames(
@@ -258,8 +262,18 @@ export default function Navbar() {
               className="w-full h-auto rounded-lg group-hover:scale-110 transition-transform duration-300"
             />
             <div className="p-4 bg-gray-800 bg-opacity-20 absolute inset-0 flex flex-col justify-end">
-              <h3 className="text-lg font-semibold text-white" style={{ textShadow: '1px 1px 3px #000' }}>{game.title}</h3>
-              <h3 className="text-lg font-semibold text-white" style={{ textShadow: '1px 1px 3px #000' }}>{game.price === 0 ? "Free to play" : `${game.price} Euro`}</h3>
+              <h3
+                className="text-lg font-semibold text-white"
+                style={{ textShadow: "1px 1px 3px #000" }}
+              >
+                {game.title}
+              </h3>
+              <h3
+                className="text-lg font-semibold text-white"
+                style={{ textShadow: "1px 1px 3px #000" }}
+              >
+                {game.price === 0 ? "Free to play" : `${game.price} Euro`}
+              </h3>
               <button
                 onClick={() => handleGameSelect(game.id)}
                 className={classNames(
@@ -273,31 +287,69 @@ export default function Navbar() {
             </div>
           </div>
         ))}
-
       </div>
 
       {/* Total Price */}
       <div className="flex justify-center mb-4 mx-auto border-2 border-orange-600 shadow-lg p-3 rounded-lg">
         <div className="flex flex-col items-center">
-          <span className="text-lg font-semibold text-orange-600 mb-2">Total Price: {totalPrice.toFixed(2)} Euro</span>
-          <span className="text-sm text-gray-700">Number of games: {favorites.length}</span>
+          <span className="text-sm text-gray-300 underline">
+            Number of games: {favorites.length}
+          </span>
           {/* Listing of cart */}
           <div className="mt-2">
             {favorites.map((gameId) => {
               const selectedGame = games.find((game) => game.id === gameId);
               return (
                 <div key={gameId} className="flex justify-between w-full">
-                  <span className="text-sm text-gray-300">{selectedGame.title}</span>
-                  <span>{selectedGame.price.toFixed(2)} Euro</span>
+                  <span className="text-sm text-gray-200">
+                    {selectedGame.title}
+                  </span>
                 </div>
               );
             })}
           </div>
+          <span className="text-lg font-semibold text-orange-600 mb-2 overline">
+            Total Price: {totalPrice.toFixed(2)} Euro
+          </span>
           {/* Checkout */}
-          <span className="text-sm text-gray-100 mt-2 flex items-center underline hover:text-orange-600">
-            <ShoppingCartIcon className="h-5 w-5 mr-1 text-orange-600" />Checkout
+          <span
+            className="text-sm text-gray-100 mt-2 flex items-center underline hover:text-orange-600"
+            onClick={() => document.getElementById("my_modal_5").showModal()}
+          >
+            <ShoppingCartIcon className="h-5 w-5 mr-1 text-orange-600" />
+            Checkout
           </span>
         </div>
+        {/* Modal */}
+        {/* Open the modal using document.getElementById('ID').showModal() method */}
+
+        <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+          <div className="modal-box bg-white shadow-lg rounded-lg p-4">
+            <h3 className="font-bold text-lg">{totalPrice.toFixed(2)} Euro</h3>
+            <div className="mt-2">
+              {favorites.map((gameId) => {
+                const selectedGame = games.find((game) => game.id === gameId);
+                return (
+                  <div key={gameId} className="flex justify-between items-center w-full py-1 border-b border-gray-200">
+                    <span className="text-sm text-gray-700">
+                      {selectedGame.title}
+                    </span>
+                    <span className="text-sm text-gray-700">{selectedGame.price.toFixed(2)} Euro</span>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="modal-action mt-4 flex justify-end">
+              <form method="dialog">
+                {/* if there is a button in form, it will close the modal */}
+                <button className="btn bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline">
+                  Close
+                </button>
+              </form>
+            </div>
+          </div>
+        </dialog>
       </div>
     </>
   );

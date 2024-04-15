@@ -13,5 +13,5 @@ module.exports = withMT({
     fontFamily: { 'sans': ['Press Start 2P'], },
     extend: {},
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 });
