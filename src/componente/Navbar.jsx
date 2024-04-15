@@ -126,7 +126,7 @@ export default function Navbar() {
                         type="search"
                         className="text-center bg-purple-white shadow-md rounded border-0 p-0.5 focus:outline-none focus:ring-2 focus:ring-orange-600"
                         placeholder="Search for game"
-                        style={{ fontSize: '12px' }}
+                        style={{ fontSize: '16px' }}
                       />
                       <div className="absolute pin-r pin-t text-purple-lighter"></div>
                     </div>
