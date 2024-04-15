@@ -96,13 +96,13 @@ export default function Navbar() {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
-                    src="https://www.pngall.com/wp-content/uploads/5/Laboratory-Flask-Glass-PNG-Picture.png"
+                    src="../images/flask.png"
                     alt="LevelUp"
-                  />
+                  /><span className="text-orange-600 text-xl font">Level-Up</span>
                 </div>
                 {/* Navbar links */}
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4 items-center">
+                  <div className="flex space-x-4 items-center font">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
@@ -126,6 +126,7 @@ export default function Navbar() {
                         type="search"
                         className="text-center bg-purple-white shadow-md rounded border-0 p-0.5 focus:outline-none focus:ring-2 focus:ring-orange-600"
                         placeholder="Search for game"
+                        style={{ fontSize: '12px' }}
                       />
                       <div className="absolute pin-r pin-t text-purple-lighter"></div>
                     </div>
@@ -136,7 +137,7 @@ export default function Navbar() {
                   {/* Notification Bell */}
                   <button
                     type="button"
-                    className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-gray-800"
+                    className="relative rounded-full bg-orange-800 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
                     <span className="absolute -inset-1.5" />
                     <span className="sr-only">View notifications</span>
@@ -151,7 +152,7 @@ export default function Navbar() {
                         <span className="sr-only">Open user menu</span>
                         <img
                           className="h-8 w-8 rounded-full"
-                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                          src="../images/BelleDelphine.webp"
                           alt=""
                         />
                       </Menu.Button>

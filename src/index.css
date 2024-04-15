@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 ::-webkit-scrollbar {
     width: 0px;
+}
+
+.font {
+    font-family: 'Press Start 2P';
+}
+
+.fontsize {
+    font-size: 3;
+    color: blueviolet;
 }
