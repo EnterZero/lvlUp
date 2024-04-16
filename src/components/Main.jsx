@@ -246,16 +246,6 @@ export default function Navbar() {
             key={game.id}
             className="group rounded-lg overflow-hidden relative border border-2 border-orange-600 shadow-md hover:shadow-lg"
           >
-            <button
-              onClick={() => handleGameSelect(game.id)}
-              className={classNames(
-                "absolute top-0 right-0 m-2 text-gray-400 ",
-                isGameSelected(game.id) ? "text-orange-600" : ""
-              )}
-            >
-              <HeartIcon className="h-5 w-5 mr-1" />
-              Buy now!
-            </button>
             <img
               src={`images/games/${game.image}.webp`}
               alt={game.title}
@@ -277,11 +267,11 @@ export default function Navbar() {
               <button
                 onClick={() => handleGameSelect(game.id)}
                 className={classNames(
-                  "absolute top-0 right-0 m-2 text-gray-400 hover:text-orange-600",
+                  "flex absolute top-0 right-0 m-2 text-gray-400 hover:text-orange-600",
                   isGameSelected(game.id) ? "text-orange-600" : ""
                 )}
               >
-                <HeartIcon className="h-5 w-5 mr-1" />
+                <ShoppingCartIcon className="h-5 w-5 mr-1" />
                 Buy now!
               </button>
             </div>
@@ -313,7 +303,7 @@ export default function Navbar() {
           </span>
           {/* Checkout */}
           <span
-            className="text-sm text-gray-100 mt-2 flex items-center underline hover:text-orange-600"
+            className="text-sm text-gray-100 mt-2 flex items-center hover:text-orange-600"
             onClick={() => document.getElementById("my_modal_5").showModal()}
           >
             <ShoppingCartIcon className="h-5 w-5 mr-1 text-orange-600" />
