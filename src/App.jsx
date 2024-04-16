@@ -1,7 +1,7 @@
 
 import './App.css'
-import Main from './componente/Main'
-import Carousel from './componente/Carousel'
+import Main from './components/Main'
+import Carousel from './components/Carousel'
 
 function App() {
 
