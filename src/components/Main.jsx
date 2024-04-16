@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
@@ -61,42 +63,26 @@ export default function Navbar() {
 
   return (
     <>
-      <style>{`
-        body {
-          background-color: #000;
-        }
-      `}</style>
       <Disclosure
         as="nav"
         className="bg-gray-900 shadow mb-8 fixed w-full z-10 top-0"
       >
         {({ open }) => (
           <>
-            {/* Navbar content */}
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-              <div className="relative flex h-16 items-center justify-between">
-                {/* Mobile menu button */}
-                <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-orange-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                    <span className="absolute -inset-0.5" />
-                    <span className="sr-only">Open main menu</span>
-                    {open ? (
-                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                    ) : (
-                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                    )}
-                  </Disclosure.Button>
-                </div>
+              <div className="relative flex flex-col sm:flex-row h-16 items-center justify-between">
                 {/* Logo */}
-                <div className="flex flex-shrink-0 items-center">
+                <div className="flex flex-shrink-0 items-center justify-center w-full sm:w-auto">
                   <img
                     className="h-8 w-auto"
                     src="../images/flask.png"
                     alt="LevelUp"
-                  /><span className="text-orange-600 text-xl font">Level-Up</span>
+                  />
+                  <span className="text-orange-600 text-xl font">Level-Up</span>
                 </div>
+
                 {/* Navbar links */}
-                <div className="hidden sm:ml-6 sm:block">
+                <div className="sm:flex-grow">
                   <div className="flex space-x-4 items-center font">
                     {navigation.map((item) => (
                       <a
@@ -113,34 +99,30 @@ export default function Navbar() {
                         {item.name}
                       </a>
                     ))}
-                    {/* Search input */}
-                    <div className="relative mr-6 my-2">
-                      <input
-                        value={searchText}
-                        onChange={handleSearchTextChange}
-                        type="search"
-                        className="text-center bg-purple-white shadow-md rounded border-0 p-0.5 focus:outline-none focus:ring-2 focus:ring-orange-600"
-                        placeholder="Search for game"
-                        style={{ fontSize: '16px' }}
-                      />
-                      <div className="absolute pin-r pin-t text-purple-lighter"></div>
-                    </div>
                   </div>
                 </div>
+
+                {/* Search input */}
+                <div className="relative flex justify-center w-full mt-2 ">
+                  <input
+                    value={searchText}
+                    onChange={handleSearchTextChange}
+                    type="search"
+                    className="text-center bg-purple-white shadow-md rounded border-0 p-0.5 focus:outline-none focus:ring-2 focus:ring-orange-600"
+                    placeholder="Search for game"
+                    style={{ fontSize: '16px' }}
+                  />
+                </div>
+
                 {/* Notification Bell and Profile dropdown */}
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  {/* Notification Bell */}
                   <button
                     type="button"
                     className="relative rounded-full bg-orange-800 p-1 text-white border-2 border-orange-800 hover:text-white hover:border-white"
                   >
-                    <span className="absolute -inset-1.5" />
-                    <span className="sr-only">View notifications</span>
                     <BellIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
-                  {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
-                    {/* Profile image button */}
                     <div>
                       <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm border-2 border-gray-900 hover:border-white">
                         <span className="absolute -inset-1.5" />
@@ -152,7 +134,6 @@ export default function Navbar() {
                         />
                       </Menu.Button>
                     </div>
-                    {/* Profile dropdown items */}
                     <Transition
                       as={Fragment}
                       enter="transition ease-out duration-100"
@@ -208,6 +189,7 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
+
             {/* Mobile menu */}
             <Disclosure.Panel className="sm:hidden">
               <div className="space-y-1 px-2 pb-3 pt-2">
@@ -238,7 +220,7 @@ export default function Navbar() {
         {filteredGames.map((game) => (
           <div
             key={game.id}
-            className="group rounded-lg overflow-hidden relative border border-2 border-orange-600 shadow-md hover:shadow-lg"
+            className="group rounded-lg overflow-hidden relative border-2 border-orange-600 shadow-md hover:shadow-lg"
           >
             <img
               src={`images/games/${game.image}.webp`}
@@ -262,8 +244,8 @@ export default function Navbar() {
                 onClick={() => handleGameSelect(game.id)}
                 style={{ textShadow: "1px 1px 3px #000" }}
                 className={classNames(
-                  "flex absolute top-0 right-0 m-4 text-gray-400 hover:border-orange-600 text-lg text-white border-2 border-gray-400 p-2 bg-gray-900/50 rounded-lg",
-                  isGameSelected(game.id) ? "" : ""
+                  "flex absolute top-0 right-0 m-3 text-gray-400 hover:border-orange-600 text-lg text-white border-2 border-gray-400 p-2 bg-gray-900/50",
+                  isGameSelected(game.id) ? "text-orange-600" : ""
                 )}
               >
                 <ShoppingCartIcon className="h-7 w-5 mr-3 text-orange-600" />
@@ -275,7 +257,7 @@ export default function Navbar() {
       </div>
 
       {/* Total Price */}
-      <div className="fixed bottom-0 w-full bg-gray-900 flex justify-center mx-auto border-2 border-orange-600 shadow-lg p-3 rounded-lg">
+      <div className="flex justify-center mb-4 mx-auto border-2 border-orange-600 shadow-lg p-3 rounded-lg">
         <div className="flex flex-col items-center">
           <span className="text-sm text-gray-300 underline">
             Number of games: {favorites.length}
