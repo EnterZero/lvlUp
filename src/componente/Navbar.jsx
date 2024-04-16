@@ -240,7 +240,7 @@ export default function Navbar() {
       </Disclosure>
 
       {/* Render filtered games */}
-      <div className="mt-20 mb-3 bg bg-lime grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols4 gap-6 bg-gray-950">
+      <div className="mt-20 mb-3 bg bg-lime grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols4 gap-6">
         {filteredGames.map((game) => (
           <div
             key={game.id}
