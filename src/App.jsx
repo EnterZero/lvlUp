@@ -1,15 +1,15 @@
 
 import './App.css'
-import Navbar from './componente/Navbar'
 import Main from './componente/Main'
+import Carousel from './componente/Carousel'
 
 function App() {
- 
+
 
   return (
     <>
-     <Navbar/>
-      <Main/>
+      <Main />
+      <Carousel />
     </>
   )
 }
