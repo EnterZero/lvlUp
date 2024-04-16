@@ -262,8 +262,8 @@ export default function Navbar() {
                 onClick={() => handleGameSelect(game.id)}
                 style={{ textShadow: "1px 1px 3px #000" }}
                 className={classNames(
-                  "flex absolute top-0 right-0 m-3 text-gray-400 hover:border-orange-600 text-lg text-white border-2 border-gray-400 p-2 bg-gray-900/50",
-                  isGameSelected(game.id) ? "text-orange-600" : ""
+                  "flex absolute top-0 right-0 m-4 text-gray-400 hover:border-orange-600 text-lg text-white border-2 border-gray-400 p-2 bg-gray-900/50 rounded-lg",
+                  isGameSelected(game.id) ? "" : ""
                 )}
               >
                 <ShoppingCartIcon className="h-7 w-5 mr-3 text-orange-600" />
@@ -275,7 +275,7 @@ export default function Navbar() {
       </div>
 
       {/* Total Price */}
-      <div className="flex justify-center mb-4 mx-auto border-2 border-orange-600 shadow-lg p-3 rounded-lg">
+      <div className="fixed bottom-0 w-full bg-gray-900 flex justify-center mx-auto border-2 border-orange-600 shadow-lg p-3 rounded-lg">
         <div className="flex flex-col items-center">
           <span className="text-sm text-gray-300 underline">
             Number of games: {favorites.length}
