@@ -266,12 +266,13 @@ export default function Navbar() {
               </h3>
               <button
                 onClick={() => handleGameSelect(game.id)}
+                style={{ textShadow: "1px 1px 3px #000" }}
                 className={classNames(
-                  "flex absolute top-0 right-0 m-2 text-gray-400 hover:text-orange-600",
+                  "flex absolute top-0 right-0 m-3 text-gray-400 hover:text-orange-600 text-lg text-white",
                   isGameSelected(game.id) ? "text-orange-600" : ""
                 )}
               >
-                <ShoppingCartIcon className="h-5 w-5 mr-1" />
+                <ShoppingCartIcon className="h-7 w-5 mr-1 text-orange-600" />
                 Buy now!
               </button>
             </div>
