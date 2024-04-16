@@ -16,7 +16,8 @@
 		"description": "A dark and emotional action-adventure game set in plague-ridden medieval France.",
 		"price": 39.99,
 		"availability": "sofort verfügbar",
-		"image": "a-plague-tale-innocence"
+		"image": "a-plague-tale-innocence",
+		"quantity": 1
 	},
 	{
 		"id": 2,
@@ -32,7 +33,8 @@
 		"description": "A classic real-time strategy game remastered with enhanced graphics and new content.",
 		"price": 19.99,
 		"availability": "sofort verfügbar",
-		"image": "age-of-empires"
+		"image": "age-of-empires",
+		"quantity": 1
 	},
 	{
 		"id": 3,
@@ -50,7 +52,8 @@
 		"description": "One of the pioneering survival horror games that set the standard for the genre.",
 		"price": 59.99,
 		"availability": "sofort verfügbar",
-		"image": "alone-in-the-dark"
+		"image": "alone-in-the-dark",
+		"quantity": 1
 	},
 	{
 		"id": 4,
@@ -67,7 +70,8 @@
 		"description": "A multiplayer game where crewmates try to complete tasks while impostors try to eliminate them.",
 		"price": 4.99,
 		"availability": "sofort verfügbar",
-		"image": "among-us"
+		"image": "among-us",
+		"quantity": 1
 	},
 	{
 		"id": 5,
@@ -86,7 +90,8 @@
 		"description": "Embark on a new journey as a Viking warrior in the latest installment of the Assassin's Creed series.",
 		"price": 59.99,
 		"availability": "sofort verfügbar",
-		"image": "assassin-s-creed-valhalla-die-zeichen-ragnaroeks"
+		"image": "assassin-s-creed-valhalla-die-zeichen-ragnaroeks",
+		"quantity": 1
 	},
 	{
 		"id": 6,
@@ -105,7 +110,8 @@
 		"description": "Explore the beautiful yet dangerous world of Pandora in this action-adventure game based on James Cameron's Avatar universe.",
 		"price": 69.99,
 		"availability": "sofort verfügbar",
-		"image": "avatar-frontiers-of-pandora"
+		"image": "avatar-frontiers-of-pandora",
+		"quantity": 1
 	},
 	{
 		"id": 7,
@@ -142,7 +148,8 @@
 		"description": "Immerse yourself in the dystopian future of Night City in this highly anticipated open-world RPG.",
 		"price": 79.99,
 		"availability": "sofort verfügbar",
-		"image": "cyberpunk-2077-ultimate-edition"
+		"image": "cyberpunk-2077-ultimate-edition",
+		"quantity": 1
 	},
 	{
 		"id": 9,
@@ -179,7 +186,8 @@
 		"description": "Continue your epic journey as a Guardian in the ultimate battle against the Darkness in this thrilling sequel.",
 		"price": 49.99,
 		"availability": "ausverkauft",
-		"image": "destiny-2-die-finale"
+		"image": "destiny-2-die-finale",
+		"quantity": 1
 	},
 	{
 		"id": 11,
@@ -198,7 +206,8 @@
 		"description": "Embark on an epic adventure in a vast open world filled with mythical creatures and ancient mysteries.",
 		"price": 49.99,
 		"availability": "sofort verfügbar",
-		"image": "dragon-s-dogma-2"
+		"image": "dragon-s-dogma-2",
+		"quantity": 1
 	},
 	{
 		"id": 12,
@@ -217,7 +226,8 @@
 		"description": "Discover the secrets of the shattered world of Elden Ring in this highly anticipated action RPG.",
 		"price": 59.99,
 		"availability": "sofort verfügbar",
-		"image": "elden-ring"
+		"image": "elden-ring",
+		"quantity": 1
 	},
 	{
 		"id": 13,
@@ -236,7 +246,8 @@
 		"description": "Explore the post-apocalyptic wasteland of Boston and shape its future in this epic open-world RPG.",
 		"price": 29.99,
 		"availability": "sofort verfügbar",
-		"image": "fallout-4"
+		"image": "fallout-4",
+		"quantity": 1
 	},
 	{
 		"id": 14,
@@ -254,7 +265,8 @@
 		"description": "Build and manage your own farm, grow crops, raise livestock, and expand your agricultural empire.",
 		"price": 39.99,
 		"availability": "sofort verfügbar",
-		"image": "farming-simulator-22"
+		"image": "farming-simulator-22",
+		"quantity": 1
 	},
 	{
 		"id": 15,
@@ -270,7 +282,8 @@
 		"description": "Enter a new world of fantasy and adventure in the latest installment of the legendary Final Fantasy series.",
 		"price": 59.99,
 		"availability": "ausverkauft",
-		"image": "final-fantasy-xvi"
+		"image": "final-fantasy-xvi",
+		"quantity": 1
 	},
 	{
 		"id": 16,
@@ -289,7 +302,8 @@
 		"description": "Join the battle as iconic Transformers characters in the ever-evolving world of Fortnite.",
 		"price": 24.99,
 		"availability": "sofort verfügbar",
-		"image": "fortnite-transformers"
+		"image": "fortnite-transformers",
+		"quantity": 1
 	},
 	{
 		"id": 17,
@@ -305,7 +319,8 @@
 		"description": "Experience the thrill of open-world racing and explore stunning landscapes in this acclaimed racing game.",
 		"price": 49.99,
 		"availability": "sofort verfügbar",
-		"image": "forza-horizon"
+		"image": "forza-horizon",
+		"quantity": 1
 	},
 	{
 		"id": 18,
@@ -324,7 +339,8 @@
 		"description": "Embark on an epic journey across the magical world of Teyvat and uncover its secrets in this open-world RPG.",
 		"price": 0,
 		"availability": "sofort verfügbar",
-		"image": "genshin-impact"
+		"image": "genshin-impact",
+		"quantity": 1
 	},
 	{
 		"id": 19,
@@ -341,7 +357,8 @@
 		"description": "Become a samurai warrior and defend the island of Tsushima from Mongol invaders in this breathtaking open-world adventure.",
 		"price": 49.99,
 		"availability": "sofort verfügbar",
-		"image": "ghost-of-tsushima"
+		"image": "ghost-of-tsushima",
+		"quantity": 1
 	},
 	{
 		"id": 20,
@@ -358,7 +375,8 @@
 		"description": "Join Kratos and Atreus on a new adventure in the realms of Norse mythology in the highly anticipated sequel to God of War.",
 		"price": 59.99,
 		"availability": "ausverkauft",
-		"image": "god-of-war-ragnaroek"
+		"image": "god-of-war-ragnaroek",
+		"quantity": 1
 	},
 	{
 		"id": 21,
@@ -375,7 +393,8 @@
 		"description": "Experience the ultimate racing simulation with stunning visuals and realistic physics in the latest installment of the Gran Turismo series.",
 		"price": 69.99,
 		"availability": "sofort verfügbar",
-		"image": "gran-turismo-7"
+		"image": "gran-turismo-7",
+		"quantity": 1
 	},
 	{
 		"id": 22,
@@ -394,7 +413,8 @@
 		"description": "Explore the sprawling open world of Los Santos and embark on a life of crime in this critically acclaimed action-adventure game.",
 		"price": 29.99,
 		"availability": "sofort verfügbar",
-		"image": "grand-theft-auto-v"
+		"image": "grand-theft-auto-v",
+		"quantity": 1
 	},
 	{
 		"id": 23,
@@ -413,7 +433,8 @@
 		"description": "Journey into the depths of Viking hell and experience the haunting story of Senua in this atmospheric action-adventure game.",
 		"price": 24.99,
 		"availability": "sofort verfügbar",
-		"image": "hellblade"
+		"image": "hellblade",
+		"quantity": 1
 	},
 	{
 		"id": 24,
@@ -432,7 +453,8 @@
 		"description": "Join an elite squad of soldiers and engage in intense cooperative battles against alien threats in this top-down shooter.",
 		"price": 39.99,
 		"availability": "sofort verfügbar",
-		"image": "helldivers-2"
+		"image": "helldivers-2",
+		"quantity": 1
 	},
 	{
 		"id": 25,
@@ -449,7 +471,8 @@
 		"description": "Embark on a journey to the mysterious Forbidden West and uncover the secrets of a post-apocalyptic world.",
 		"price": 59.99,
 		"availability": "sofort verfügbar",
-		"image": "horizon-forbidden-west"
+		"image": "horizon-forbidden-west",
+		"quantity": 1
 	},
 	{
 		"id": 26,
@@ -465,7 +488,8 @@
 		"description": "Join millions of players in the world's most popular multiplayer online battle arena game and compete for glory.",
 		"price": 0,
 		"availability": "sofort verfügbar",
-		"image": "league-of-legends"
+		"image": "league-of-legends",
+		"quantity": 1
 	},
 	{
 		"id": 27,
@@ -484,7 +508,8 @@
 		"description": "Relive the iconic stealth-action adventures of Solid Snake with remastered editions of the Metal Gear Solid series.",
 		"price": 59.99,
 		"availability": "sofort verfügbar",
-		"image": "metal-gear-solid"
+		"image": "metal-gear-solid",
+		"quantity": 1
 	},
 	{
 		"id": 28,
@@ -504,7 +529,8 @@
 		"description": "Explore, build, and survive in a blocky world filled with endless possibilities in this iconic sandbox game.",
 		"price": 19.99,
 		"availability": "sofort verfügbar",
-		"image": "minecraft"
+		"image": "minecraft",
+		"quantity": 1
 	},
 	{
 		"id": 29,
@@ -523,7 +549,8 @@
 		"description": "Embark on epic hunts and face off against giant monsters in this critically acclaimed action RPG.",
 		"price": 39.99,
 		"availability": "sofort verfügbar",
-		"image": "monster-hunter-world"
+		"image": "monster-hunter-world",
+		"quantity": 1
 	},
 	{
 		"id": 30,
@@ -539,7 +566,8 @@
 		"description": "Join Princess Peach on an exciting adventure to reclaim the Mushroom Kingdom in this charming platformer.",
 		"price": 49.99,
 		"availability": "ausverkauft",
-		"image": "princess-peach-showtime"
+		"image": "princess-peach-showtime",
+		"quantity": 1
 	},
 	{
 		"id": 31,
@@ -555,7 +583,8 @@
 		"description": "Build, manage, and expand your own ranch in this realistic farming simulation game.",
 		"price": 29.99,
 		"availability": "sofort verfügbar",
-		"image": "ranch-simulator"
+		"image": "ranch-simulator",
+		"quantity": 1
 	},
 	{
 		"id": 32,
@@ -573,7 +602,8 @@
 		"description": "Face terrifying enemies and uncover the truth behind the outbreak in Raccoon City in this thrilling survival horror game.",
 		"price": 39.99,
 		"availability": "sofort verfügbar",
-		"image": "resident-evil-3"
+		"image": "resident-evil-3",
+		"quantity": 1
 	},
 	{
 		"id": 33,
@@ -591,7 +621,8 @@
 		"description": "Experience the acclaimed survival horror classic that redefined the genre with its gripping story and intense gameplay.",
 		"price": 19.99,
 		"availability": "sofort verfügbar",
-		"image": "resident-evil-4"
+		"image": "resident-evil-4",
+		"quantity": 1
 	},
 	{
 		"id": 34,
@@ -609,7 +640,8 @@
 		"description": "Return to the eerie town of Silent Hill in this modern remake of the survival horror masterpiece.",
 		"price": 49.99,
 		"availability": "vorbestellbar",
-		"image": "silent-hill-2"
+		"image": "silent-hill-2",
+		"quantity": 1
 	},
 	{
 		"id": 35,
@@ -627,7 +659,8 @@
 		"description": "Join the foul-mouthed kids of South Park on a wacky adventure filled with humor and satire.",
 		"price": 29.99,
 		"availability": "sofort verfügbar",
-		"image": "south-park-snow-day"
+		"image": "south-park-snow-day",
+		"quantity": 1
 	},
 	{
 		"id": 36,
@@ -646,7 +679,8 @@
 		"description": "Experience epic battles in the Star Wars universe and fight for the fate of the galaxy in this multiplayer shooter.",
 		"price": 19.99,
 		"availability": "sofort verfügbar",
-		"image": "star-wars-battlefront"
+		"image": "star-wars-battlefront",
+		"quantity": 1
 	},
 	{
 		"id": 37,
@@ -664,7 +698,8 @@
 		"description": "Prepare for intense battles and iconic matchups in the latest installment of the legendary fighting game series.",
 		"price": 59.99,
 		"availability": "sofort verfügbar",
-		"image": "street-fighter-6"
+		"image": "street-fighter-6",
+		"quantity": 1
 	},
 	{
 		"id": 38,
@@ -683,7 +718,8 @@
 		"description": "Join the Suicide Squad on a dangerous mission to save the world from a threat unlike any other.",
 		"price": 49.99,
 		"availability": "sofort verfügbar",
-		"image": "suicide-squad"
+		"image": "suicide-squad",
+		"quantity": 1
 	},
 	{
 		"id": 39,
@@ -699,7 +735,8 @@
 		"description": "Gather your friends and family for a fun-filled party experience with classic Mario characters and minigames.",
 		"price": 49.99,
 		"availability": "sofort verfügbar",
-		"image": "super-mario-party"
+		"image": "super-mario-party",
+		"quantity": 1
 	},
 	{
 		"id": 40,
@@ -717,7 +754,8 @@
 		"description": "Enter the King of Iron Fist Tournament and battle against a diverse cast of fighters in this acclaimed fighting game.",
 		"price": 29.99,
 		"availability": "sofort verfügbar",
-		"image": "tekken-7"
+		"image": "tekken-7",
+		"quantity": 1
 	},
 	{
 		"id": 41,
@@ -735,7 +773,8 @@
 		"description": "Prepare for the next evolution of the King of Iron Fist Tournament in the highly anticipated sequel to Tekken 7.",
 		"price": 59.99,
 		"availability": "sofort verfügbar",
-		"image": "tekken-8"
+		"image": "tekken-8",
+		"quantity": 1
 	},
 	{
 		"id": 42,
@@ -754,7 +793,8 @@
 		"description": "Embark on an epic adventure in the frozen land of Skyrim and fulfill your destiny as the Dragonborn.",
 		"price": 29.99,
 		"availability": "sofort verfügbar",
-		"image": "the-elder-scrolls-v-skyrim"
+		"image": "the-elder-scrolls-v-skyrim",
+		"quantity": 1
 	},
 	{
 		"id": 43,
@@ -771,7 +811,8 @@
 		"description": "Explore the vast kingdom of Hyrule and uncover its secrets in this critically acclaimed open-world adventure.",
 		"price": 59.99,
 		"availability": "sofort verfügbar",
-		"image": "the-legend-of-zelda-breath-of-the-wild"
+		"image": "the-legend-of-zelda-breath-of-the-wild",
+		"quantity": 1
 	},
 	{
 		"id": 44,
@@ -790,7 +831,8 @@
 		"description": "Embark on a quest of epic proportions and become a monster slayer in this critically acclaimed open-world RPG.",
 		"price": 29.99,
 		"availability": "sofort verfügbar",
-		"image": "the-witcher-3"
+		"image": "the-witcher-3",
+		"quantity": 1
 	},
 	{
 		"id": 45,
@@ -809,6 +851,7 @@
 		"description": "Relive the classic adventures of Lara Croft in stunning remastered editions of the original Tomb Raider trilogy.",
 		"price": 49.99,
 		"availability": "sofort verfügbar",
-		"image": "tomb-raider-i-iii-remastered"
+		"image": "tomb-raider-i-iii-remastered",
+		"quantity": 1
 	}
 ]

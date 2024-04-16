@@ -18,11 +18,13 @@ export default function Navbar() {
   const [searchText, setSearchText] = useState("");
   const [favorites, setFavorites] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [card, setCard] = useState([]);
 
   const calculateTotalPrice = () => {
     let totalPrice = 0;
     favorites.forEach((id) => {
       const selectedGame = games.find((game) => game.id === id);
+
       if (selectedGame) {
         totalPrice += selectedGame.price;
       }
@@ -39,13 +41,18 @@ export default function Navbar() {
   };
 
   const handleGameSelect = (gameId) => {
-    const isFavorite = favorites.includes(gameId);
+    console.log(gameId)
+    console.log(favorites)
+    setCard([...card, gameId]);
+
+
+    const isFavorite = favorites.includes(gameId.id);
     let updatedFavorites = [...favorites];
 
     if (isFavorite) {
-      updatedFavorites = favorites.filter((id) => id !== gameId);
+      updatedFavorites = favorites.filter((id) => id !== gameId.id);
     } else {
-      updatedFavorites.push(gameId);
+      updatedFavorites.push(gameId.id);
     }
 
     setFavorites(updatedFavorites);
@@ -58,6 +65,21 @@ export default function Navbar() {
   const filteredGames = games.filter((game) =>
     game.title.toLowerCase().includes(searchText.toLowerCase())
   );
+
+  function handleUpdateCartItemQuantity(gameId, amount) {
+    const updatedFavorites = card.map((item) => {
+      if (item.id === gameId) {
+        const selectedGame = games.find((game) => game.id === gameId);
+        const newQuantity = item.quantity + amount;
+        const newPrice = newQuantity * selectedGame.price;
+        return { ...item, quantity: newQuantity, price: newPrice };
+      }
+      return item;
+    });
+
+    setCard(updatedFavorites);
+  }
+
 
   return (
     <>
@@ -88,7 +110,7 @@ export default function Navbar() {
                   </Disclosure.Button>
                 </div>
                 {/* Logo */}
-                <div className="flex flex-shrink-0 items-center">
+                <div className="flex flex-shrink-0 items-center justify-center w-full sm:w-auto">
                   <img
                     className="h-8 w-auto"
                     src="../images/flask.png"
@@ -114,7 +136,7 @@ export default function Navbar() {
                       </a>
                     ))}
                     {/* Search input */}
-                    <div className="relative mr-6 my-2">
+                    <div className="relative flex justify-center w-full mt-2">
                       <input
                         value={searchText}
                         onChange={handleSearchTextChange}
@@ -168,11 +190,11 @@ export default function Navbar() {
                             <a
                               href="#"
                               className={classNames(
-                                active ? "text-orange-600" : "",
-                                "flex justify-between px-4 py-2 text-lg text-gray-400 border-b border-gray-800"
+                                active ? "bg-orange-600" : "",
+                                "flex justify-between px-4 py-2 text-lg text-white border-b border-gray-800"
                               )}
-                            ><UserIcon class="h-6 w-6 text-gray-700" />
-                              Dashboard
+                            ><UserIcon class="h-6 w-6 text-white" />
+                              Dashbord
                             </a>
                           )}
                         </Menu.Item>
@@ -181,10 +203,10 @@ export default function Navbar() {
                             <a
                               href="#"
                               className={classNames(
-                                active ? "text-orange-600" : "",
-                                "flex justify-between px-4 py-2 text-lg text-gray-400 border-b border-gray-800"
+                                active ? "bg-orange-600" : "",
+                                "flex justify-between px-4 py-2 text-lg text-white border-b border-gray-800"
                               )}
-                            ><Cog8ToothIcon class="h-6 w-6 text-gray-700" />
+                            ><Cog8ToothIcon class="h-6 w-6 text-white" />
                               Settings
                             </a>
                           )}
@@ -194,11 +216,11 @@ export default function Navbar() {
                             <a
                               href="#"
                               className={classNames(
-                                active ? "text-orange-600" : "",
-                                "flex justify-between px-4 py-2 text-lg text-gray-400"
+                                active ? "bg-orange-600" : "",
+                                "flex justify-between px-4 py-2 text-lg text-white"
                               )}
-                            ><ArrowRightStartOnRectangleIcon class="h-6 w-6 text-gray-700" />
-                              Sign out
+                            ><ArrowRightStartOnRectangleIcon class="h-6 w-6 text-white" />
+                              Logout
                             </a>
                           )}
                         </Menu.Item>
@@ -259,11 +281,10 @@ export default function Navbar() {
                 {game.price === 0 ? "Free to play" : `${game.price} Euro`}
               </h3>
               <button
-                onClick={() => handleGameSelect(game.id)}
-                style={{ textShadow: "1px 1px 3px #000" }}
+                onClick={() => handleGameSelect(game)}
                 className={classNames(
                   "flex absolute top-0 right-0 m-4 text-gray-400 hover:border-orange-600 text-lg text-white border-2 border-gray-400 p-2 bg-gray-900/50 rounded-lg",
-                  isGameSelected(game.id) ? "" : ""
+                  isGameSelected(game.id) ? "text-orange-600" : ""
                 )}
               >
                 <ShoppingCartIcon className="h-7 w-5 mr-3 text-orange-600" />
@@ -277,7 +298,7 @@ export default function Navbar() {
       {/* Total Price */}
       <div className="fixed bottom-0 w-full bg-gray-900 flex justify-center mx-auto border-2 border-orange-600 shadow-lg p-3 rounded-lg">
         <div className="flex flex-col items-center">
-          <span className="text-sm text-gray-300 underline">
+          <span className="text-sm text-gray-300">
             Number of games: {favorites.length}
           </span>
           {/* Listing of cart */}
@@ -311,23 +332,34 @@ export default function Navbar() {
         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
           <div className="modal-box bg-gray-900 shadow-lg rounded-lg p-4 border-2 border-orange-600">
             <div className="mt-2">
-              {favorites.map((gameId) => {
-                const selectedGame = games.find((game) => game.id === gameId);
-                return (
-                  <div key={gameId} className="flex justify-between items-center w-full py-1 border-b border-gray-700">
-                    <span className="text-sm text-white">
-                      {selectedGame.title}
-                    </span>
-                    <span className="text-sm text-white">{selectedGame.price.toFixed(2)} Euro</span>
+              {card.length > 0 ? card.map((item) => (
+                <div key={item.id} className="flex justify-between items-center w-full py-1 border-b border-gray-700">
+                  <span className="text-sm text-white">{item.title}</span>
+                  <span className="text-sm text-white">{item.price.toFixed(2)} Euro</span>
+                  <div className="flex gap-2 items-center">
+                    <button
+                      className="btn btn-sm bg-sky-800 text-white text-lg font-bold hover:bg-red-600"
+                      onClick={() => handleUpdateCartItemQuantity(item.id, -1)}
+                    >
+                      -
+                    </button>
+                    <span className="text-sm text-white">{item.quantity}</span>
+                    <button
+                      className="btn btn-sm text-white bg-sky-800 text-lg font-bold hover:bg-green-600"
+                      onClick={() => handleUpdateCartItemQuantity(item.id, 1)}
+                    >
+                      +
+                    </button>
                   </div>
-                );
-              })}
+                </div>
+              )) : 'Cart is emtpy'}
             </div>
-            <h3 className="font-bold text-lg text-orange-600 text-right border-b border-orange-600">{totalPrice.toFixed(2)} Euro</h3>
+
             <div className="modal-action mt-4 flex justify-end">
               <form method="dialog">
                 {/* if there is a button in form, it will close the modal */}
-                <button className="btn bg-orange-600 hover:bg-green-300 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline">
+                <h3 className="font-bold text-lg text-orange-600 text-right">{card.reduce((acc, curr) => acc + curr.price, 0).toFixed(2)} Euro</h3>
+                <button className="btn bg-orange-500 hover:bg-red-600 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline">
                   Close
                 </button>
               </form>
