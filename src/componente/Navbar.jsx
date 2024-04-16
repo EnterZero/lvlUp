@@ -324,26 +324,25 @@ export default function Navbar() {
         {/* Open the modal using document.getElementById('ID').showModal() method */}
 
         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-          <div className="modal-box bg-white shadow-lg rounded-lg p-4">
-            <h3 className="font-bold text-lg">{totalPrice.toFixed(2)} Euro</h3>
+          <div className="modal-box bg-gray-900 shadow-lg rounded-lg p-4 border-2 border-orange-600">
             <div className="mt-2">
               {favorites.map((gameId) => {
                 const selectedGame = games.find((game) => game.id === gameId);
                 return (
-                  <div key={gameId} className="flex justify-between items-center w-full py-1 border-b border-gray-200">
-                    <span className="text-sm text-gray-700">
+                  <div key={gameId} className="flex justify-between items-center w-full py-1 border-b border-gray-700">
+                    <span className="text-sm text-white">
                       {selectedGame.title}
                     </span>
-                    <span className="text-sm text-gray-700">{selectedGame.price.toFixed(2)} Euro</span>
+                    <span className="text-sm text-white">{selectedGame.price.toFixed(2)} Euro</span>
                   </div>
                 );
               })}
             </div>
-
+            <h3 className="font-bold text-lg text-orange-600 text-right border-b border-orange-600">{totalPrice.toFixed(2)} Euro</h3>
             <div className="modal-action mt-4 flex justify-end">
               <form method="dialog">
                 {/* if there is a button in form, it will close the modal */}
-                <button className="btn bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline">
+                <button className="btn bg-orange-600 hover:bg-green-300 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline">
                   Close
                 </button>
               </form>
