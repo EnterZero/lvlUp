@@ -220,7 +220,7 @@ export default function Navbar() {
         {filteredGames.map((game) => (
           <div
             key={game.id}
-            className="group rounded-lg overflow-hidden relative border border-2 border-orange-600 shadow-md hover:shadow-lg"
+            className="group rounded-lg overflow-hidden relative border-2 border-orange-600 shadow-md hover:shadow-lg"
           >
             <img
               src={`images/games/${game.image}.webp`}
@@ -244,7 +244,7 @@ export default function Navbar() {
                 onClick={() => handleGameSelect(game.id)}
                 style={{ textShadow: "1px 1px 3px #000" }}
                 className={classNames(
-                  "flex absolute top-0 right-0 m-3 text-gray-400 hover:border-orange-600 text-lg text-white border-2 border-gray-400 p-2 bg-gray-900/50",
+                  "flex absolute top-0 right-0 m-3 text-gray-400 hover:border-orange-600 text-lg  border-2 border-gray-400 p-2 bg-gray-900/50",
                   isGameSelected(game.id) ? "text-orange-600" : ""
                 )}
               >
