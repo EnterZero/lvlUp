@@ -1,13 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import {
-  Bars3Icon,
-  BellIcon,
-  XMarkIcon,
-  HeartIcon,
-  ShoppingCartIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, BellIcon, XMarkIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
 import games from "../data/games.json";
 
 const navigation = [
@@ -67,42 +63,26 @@ export default function Navbar() {
 
   return (
     <>
-      <style>{`
-        body {
-          background-color: #000;
-        }
-      `}</style>
       <Disclosure
         as="nav"
         className="bg-gray-900 shadow mb-8 fixed w-full z-10 top-0"
       >
         {({ open }) => (
           <>
-            {/* Navbar content */}
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-              <div className="relative flex h-16 items-center justify-between">
-                {/* Mobile menu button */}
-                <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-orange-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                    <span className="absolute -inset-0.5" />
-                    <span className="sr-only">Open main menu</span>
-                    {open ? (
-                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                    ) : (
-                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                    )}
-                  </Disclosure.Button>
-                </div>
+              <div className="relative flex flex-col sm:flex-row h-16 items-center justify-between">
                 {/* Logo */}
-                <div className="flex flex-shrink-0 items-center">
+                <div className="flex flex-shrink-0 items-center justify-center w-full sm:w-auto">
                   <img
                     className="h-8 w-auto"
                     src="../images/flask.png"
                     alt="LevelUp"
-                  /><span className="text-orange-600 text-xl font">Level-Up</span>
+                  />
+                  <span className="text-orange-600 text-xl font">Level-Up</span>
                 </div>
+                
                 {/* Navbar links */}
-                <div className="hidden sm:ml-6 sm:block">
+                <div className="sm:flex-grow">
                   <div className="flex space-x-4 items-center font">
                     {navigation.map((item) => (
                       <a
@@ -119,38 +99,32 @@ export default function Navbar() {
                         {item.name}
                       </a>
                     ))}
-                    {/* Search input */}
-                    <div className="relative mr-6 my-2">
-                      <input
-                        value={searchText}
-                        onChange={handleSearchTextChange}
-                        type="search"
-                        className="text-center bg-purple-white shadow-md rounded border-0 p-0.5 focus:outline-none focus:ring-2 focus:ring-orange-600"
-                        placeholder="Search for game"
-                        style={{ fontSize: '16px' }}
-                      />
-                      <div className="absolute pin-r pin-t text-purple-lighter"></div>
-                    </div>
                   </div>
                 </div>
+                
+                {/* Search input */}
+                <div className="relative flex justify-center w-full mt-2 ">
+                  <input
+                    value={searchText}
+                    onChange={handleSearchTextChange}
+                    type="search"
+                    className="text-center bg-purple-white shadow-md rounded border-0 p-0.5 focus:outline-none focus:ring-2 focus:ring-orange-600"
+                    placeholder="Search for game"
+                    style={{ fontSize: '16px' }}
+                  />
+                </div>
+
                 {/* Notification Bell and Profile dropdown */}
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  {/* Notification Bell */}
                   <button
                     type="button"
                     className="relative rounded-full bg-orange-800 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
-                    <span className="absolute -inset-1.5" />
-                    <span className="sr-only">View notifications</span>
                     <BellIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
-                  {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
-                    {/* Profile image button */}
                     <div>
                       <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-gray-800">
-                        <span className="absolute -inset-1.5" />
-                        <span className="sr-only">Open user menu</span>
                         <img
                           className="h-8 w-8 rounded-full"
                           src="../images/BelleDelphine.webp"
@@ -158,7 +132,6 @@ export default function Navbar() {
                         />
                       </Menu.Button>
                     </div>
-                    {/* Profile dropdown items */}
                     <Transition
                       as={Fragment}
                       enter="transition ease-out duration-100"
@@ -214,6 +187,7 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
+            
             {/* Mobile menu */}
             <Disclosure.Panel className="sm:hidden">
               <div className="space-y-1 px-2 pb-3 pt-2">
@@ -238,7 +212,7 @@ export default function Navbar() {
           </>
         )}
       </Disclosure>
-
+      
       {/* Render filtered games */}
       <div className="mt-20 mb-3 bg bg-lime grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols4 gap-6">
         {filteredGames.map((game) => (
@@ -278,68 +252,6 @@ export default function Navbar() {
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Total Price */}
-      <div className="flex justify-center mb-4 mx-auto border-2 border-orange-600 shadow-lg p-3 rounded-lg">
-        <div className="flex flex-col items-center">
-          <span className="text-sm text-gray-300 underline">
-            Number of games: {favorites.length}
-          </span>
-          {/* Listing of cart */}
-          <div className="mt-2">
-            {favorites.map((gameId) => {
-              const selectedGame = games.find((game) => game.id === gameId);
-              return (
-                <div key={gameId} className="flex justify-between w-full">
-                  <span className="text-sm text-gray-200">
-                    {selectedGame.title}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
-          <span className="text-lg font-semibold text-orange-600 mb-2 overline">
-            Total Price: {totalPrice.toFixed(2)} Euro
-          </span>
-          {/* Checkout */}
-          <span
-            className="text-sm text-gray-100 mt-2 flex items-center hover:text-orange-600"
-            onClick={() => document.getElementById("my_modal_5").showModal()}
-          >
-            <ShoppingCartIcon className="h-5 w-5 mr-1 text-orange-600" />
-            Checkout
-          </span>
-        </div>
-        {/* Modal */}
-        {/* Open the modal using document.getElementById('ID').showModal() method */}
-
-        <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-          <div className="modal-box bg-gray-900 shadow-lg rounded-lg p-4 border-2 border-orange-600">
-            <div className="mt-2">
-              {favorites.map((gameId) => {
-                const selectedGame = games.find((game) => game.id === gameId);
-                return (
-                  <div key={gameId} className="flex justify-between items-center w-full py-1 border-b border-gray-700">
-                    <span className="text-sm text-white">
-                      {selectedGame.title}
-                    </span>
-                    <span className="text-sm text-white">{selectedGame.price.toFixed(2)} Euro</span>
-                  </div>
-                );
-              })}
-            </div>
-            <h3 className="font-bold text-lg text-orange-600 text-right border-b border-orange-600">{totalPrice.toFixed(2)} Euro</h3>
-            <div className="modal-action mt-4 flex justify-end">
-              <form method="dialog">
-                {/* if there is a button in form, it will close the modal */}
-                <button className="btn bg-orange-600 hover:bg-green-300 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline">
-                  Close
-                </button>
-              </form>
-            </div>
-          </div>
-        </dialog>
       </div>
     </>
   );
