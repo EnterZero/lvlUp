@@ -1,13 +1,7 @@
 import { useState, useEffect } from "react";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import {
-  Bars3Icon,
-  BellIcon,
-  XMarkIcon,
-  HeartIcon,
-  ShoppingCartIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, BellIcon, XMarkIcon, ShoppingCartIcon, UserIcon, Cog8ToothIcon, ArrowRightStartOnRectangleIcon } from "@heroicons/react/24/outline";
 import games from "../data/games.json";
 
 const navigation = [
@@ -138,7 +132,7 @@ export default function Navbar() {
                   {/* Notification Bell */}
                   <button
                     type="button"
-                    className="relative rounded-full bg-orange-800 p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-gray-800"
+                    className="relative rounded-full bg-orange-800 p-1 text-white border-2 border-orange-800 hover:text-white hover:border-white"
                   >
                     <span className="absolute -inset-1.5" />
                     <span className="sr-only">View notifications</span>
@@ -148,7 +142,7 @@ export default function Navbar() {
                   <Menu as="div" className="relative ml-3">
                     {/* Profile image button */}
                     <div>
-                      <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-gray-800">
+                      <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm border-2 border-gray-900 hover:border-white">
                         <span className="absolute -inset-1.5" />
                         <span className="sr-only">Open user menu</span>
                         <img
@@ -168,17 +162,17 @@ export default function Navbar() {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-gray-900 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <Menu.Item>
                           {({ active }) => (
                             <a
                               href="#"
                               className={classNames(
-                                active ? "bg-orange-600" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                active ? "text-orange-600" : "",
+                                "flex justify-between px-4 py-2 text-lg text-gray-400 border-b border-gray-800"
                               )}
-                            >
-                              Your Profile
+                            ><UserIcon class="h-6 w-6 text-gray-700" />
+                              Dashboard
                             </a>
                           )}
                         </Menu.Item>
@@ -187,10 +181,10 @@ export default function Navbar() {
                             <a
                               href="#"
                               className={classNames(
-                                active ? "bg-orange-600" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                active ? "text-orange-600" : "",
+                                "flex justify-between px-4 py-2 text-lg text-gray-400 border-b border-gray-800"
                               )}
-                            >
+                            ><Cog8ToothIcon class="h-6 w-6 text-gray-700" />
                               Settings
                             </a>
                           )}
@@ -200,10 +194,10 @@ export default function Navbar() {
                             <a
                               href="#"
                               className={classNames(
-                                active ? "bg-orange-600" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
+                                active ? "text-orange-600" : "",
+                                "flex justify-between px-4 py-2 text-lg text-gray-400"
                               )}
-                            >
+                            ><ArrowRightStartOnRectangleIcon class="h-6 w-6 text-gray-700" />
                               Sign out
                             </a>
                           )}
@@ -268,11 +262,11 @@ export default function Navbar() {
                 onClick={() => handleGameSelect(game.id)}
                 style={{ textShadow: "1px 1px 3px #000" }}
                 className={classNames(
-                  "flex absolute top-0 right-0 m-3 text-gray-400 hover:text-orange-600 text-lg text-white",
+                  "flex absolute top-0 right-0 m-3 text-gray-400 hover:border-orange-600 text-lg text-white border-2 border-gray-400 p-2 bg-gray-900/50",
                   isGameSelected(game.id) ? "text-orange-600" : ""
                 )}
               >
-                <ShoppingCartIcon className="h-7 w-5 mr-1 text-orange-600" />
+                <ShoppingCartIcon className="h-7 w-5 mr-3 text-orange-600" />
                 Buy now!
               </button>
             </div>
