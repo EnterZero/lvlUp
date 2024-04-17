@@ -78,8 +78,12 @@ export default function Navbar() {
     });
 
     setCard(updatedFavorites);
-  }
+  };
 
+  const handleClearCart = () => {
+    setCard([]);
+    setFavorites([]);
+  };
 
   return (
     <>
@@ -136,14 +140,14 @@ export default function Navbar() {
                       </a>
                     ))}
                     {/* Search input */}
-                    <div className="relative flex justify-center w-full mt-2">
+                    <div className="relative flex justify-center w-full">
                       <input
                         value={searchText}
                         onChange={handleSearchTextChange}
                         type="search"
-                        className="text-center bg-purple-white shadow-md rounded border-0 p-0.5 focus:outline-none focus:ring-2 focus:ring-orange-600"
-                        placeholder="Search for game"
-                        style={{ fontSize: '16px' }}
+                        className="text-center shadow-md rounded p-0.5 border-2 border-orange-800 focus:outline-none focus:ring-2 focus:ring-orange-600"
+                        placeholder="search"
+                        style={{ fontSize: '13px' }}
                       />
                       <div className="absolute pin-r pin-t text-purple-lighter"></div>
                     </div>
@@ -168,8 +172,8 @@ export default function Navbar() {
                         <span className="absolute -inset-1.5" />
                         <span className="sr-only">Open user menu</span>
                         <img
-                          className="h-8 w-8 rounded-full"
-                          src="../images/BelleDelphine.webp"
+                          className="h-9 w-9 rounded-full"
+                          src="../images/avatar.jpg"
                           alt=""
                         />
                       </Menu.Button>
@@ -284,7 +288,7 @@ export default function Navbar() {
                 onClick={() => handleGameSelect(game)}
                 className={classNames(
                   "flex absolute top-0 right-0 m-4 text-gray-400 hover:border-orange-600 text-lg text-white border-2 border-gray-400 p-2 bg-gray-900/50 rounded-lg",
-                  isGameSelected(game.id) ? "text-orange-600" : ""
+                  isGameSelected(game.id) ? "bg-green-700" : "bg-gray-900/50"
                 )}
               >
                 <ShoppingCartIcon className="h-7 w-5 mr-3 text-orange-600" />
@@ -328,40 +332,69 @@ export default function Navbar() {
         </div>
         {/* Modal */}
         {/* Open the modal using document.getElementById('ID').showModal() method */}
-
         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
           <div className="modal-box bg-gray-900 shadow-lg rounded-lg p-4 border-2 border-orange-600">
             <div className="mt-2">
-              {card.length > 0 ? card.map((item) => (
-                <div key={item.id} className="flex justify-between items-center w-full py-1 border-b border-gray-700">
-                  <span className="text-sm text-white">{item.title}</span>
-                  <span className="text-sm text-white">{item.price.toFixed(2)} Euro</span>
-                  <div className="flex gap-2 items-center">
-                    <button
-                      className="btn btn-sm bg-sky-800 text-white text-lg font-bold hover:bg-red-600"
-                      onClick={() => handleUpdateCartItemQuantity(item.id, -1)}
-                    >
-                      -
-                    </button>
-                    <span className="text-sm text-white">{item.quantity}</span>
-                    <button
-                      className="btn btn-sm text-white bg-sky-800 text-lg font-bold hover:bg-green-600"
-                      onClick={() => handleUpdateCartItemQuantity(item.id, 1)}
-                    >
-                      +
-                    </button>
+              {card.length > 0
+                ? card.map((item) => (
+                  <div
+                    key={item.id}
+                    className="flex justify-between items-center w-full py-1 border-b border-gray-700"
+                  >
+                    <span className="text-sm text-white">{item.title}</span>
+                    <div className="flex-grow"></div> {/* Platzhalter, um den Raum zwischen title und price zu füllen */}
+                    <span className="text-sm text-white mr-3">{item.price.toFixed(2)} Euro</span>
+                    <div className="flex gap-2 items-center">
+                      <button
+                        className="btn btn-sm bg-orange-600 text-white text-lg font-bold hover:bg-red-600"
+                        onClick={() =>
+                          handleUpdateCartItemQuantity(item.id, -1)
+                        }
+                      >
+                        -
+                      </button>
+                      <span className="text-sm text-white">
+                        {item.quantity}
+                      </span>
+                      <button
+                        className="btn btn-sm text-white bg-orange-600 text-lg font-bold hover:bg-green-600"
+                        onClick={() =>
+                          handleUpdateCartItemQuantity(item.id, 1)
+                        }
+                      >
+                        +
+                      </button>
+                    </div>
                   </div>
-                </div>
-              )) : 'Cart is emtpy'}
+                ))
+                : "Cart is empty"}
             </div>
-
             <div className="modal-action mt-4 flex justify-end">
               <form method="dialog">
                 {/* if there is a button in form, it will close the modal */}
-                <h3 className="font-bold text-lg text-orange-600 text-right">{card.reduce((acc, curr) => acc + curr.price, 0).toFixed(2)} Euro</h3>
+                <h3 className="font-bold text-lg text-orange-600 text-right">
+                  {card.reduce((acc, curr) => acc + curr.price, 0).toFixed(2)}{" "}
+                  Euro
+                </h3>
                 <button className="btn bg-orange-500 hover:bg-red-600 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline">
                   Close
                 </button>
+                {/* Button zum Löschen aller Spiele */}
+                <button
+                  className="btn bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline ml-2"
+                  onClick={() => handleClearCart()} // handleClearCart ist eine Funktion, die den Warenkorb leert
+                >
+                  Delete all games
+                </button>
+                {/* Button für "Jetzt bezahlen" mit Link */}
+                <a
+                  href="https://www.klarna.com/sofort/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn bg-orange-600 hover:bg-green-600 text-white px-4 py-2 rounded ml-2 focus:outline-none focus:shadow-outline"
+                >
+                  Pay now
+                </a>
               </form>
             </div>
           </div>
