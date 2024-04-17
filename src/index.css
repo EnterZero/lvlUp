@@ -14,3 +14,7 @@
 .font {
     font-family: 'Press Start 2P';
 }
+
+.hidden {
+    display: none;
+}

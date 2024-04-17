@@ -103,7 +103,7 @@ export default function Navbar() {
               <div className="relative flex h-16 items-center justify-between">
                 {/* Mobile menu button */}
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-orange-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 bg-orange-600 text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Open main menu</span>
                     {open ? (
@@ -114,12 +114,12 @@ export default function Navbar() {
                   </Disclosure.Button>
                 </div>
                 {/* Logo */}
-                <div className="flex flex-shrink-0 items-center justify-center w-full sm:w-auto">
+                <div className="flex flex-shrink-0 items-center justify-start ms-10 w-full sm:w-auto">
                   <img
                     className="h-8 w-auto"
                     src="../images/flask.png"
                     alt="LevelUp"
-                  /><span className="text-orange-600 text-xl font">Level-Up</span>
+                  /><span className="text-orange-600 text-xl font hidden">Level-Up</span>
                 </div>
                 {/* Navbar links */}
                 <div className="hidden sm:ml-6 sm:block">
@@ -384,7 +384,7 @@ export default function Navbar() {
                   className="btn bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded focus:outline-none focus:shadow-outline ml-2"
                   onClick={() => handleClearCart()} // handleClearCart ist eine Funktion, die den Warenkorb leert
                 >
-                  Delete all games
+                  Delete
                 </button>
                 {/* Button für "Jetzt bezahlen" mit Link */}
                 <a
