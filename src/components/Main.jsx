@@ -407,7 +407,7 @@ export default function Navbar() {
                 </button>
                 {/* Button für "Jetzt bezahlen" mit Link */}
                 <a
-                  href="https://www.klarna.com/sofort/"
+                  href="https://www.paypal.me/chaz1q"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn bg-orange-600 hover:bg-green-600 text-white px-4 py-2 rounded ml-2 focus:outline-none focus:shadow-outline"
