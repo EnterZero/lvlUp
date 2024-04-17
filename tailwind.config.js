@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-
+// Update 17.04.2024 21:10
 const withMT = require("@material-tailwind/react/utils/withMT");
 
 module.exports = withMT({

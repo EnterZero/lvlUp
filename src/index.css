@@ -1,20 +1,25 @@
+/* Update 17.04.2024 21:10 */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Hintergrund */
 :root {
     background-color: black;
 }
 
+/* Scrollbar entfernt */
 ::-webkit-scrollbar {
     width: 0px;
 }
 
+/* Font */
 .font {
     font-family: 'Press Start 2P';
 }
 
+/* Hide Elements (Mobile Navbar */
 .hidden {
     display: none;
 }
