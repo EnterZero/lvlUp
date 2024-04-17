@@ -40,23 +40,34 @@ export default function Navbar() {
     setSearchText(e.target.value);
   };
 
-  const handleGameSelect = (gameId) => {
-    console.log(gameId)
-    console.log(favorites)
-    setCard([...card, gameId]);
-
-
-    const isFavorite = favorites.includes(gameId.id);
+  const handleGameSelect = (game) => {
+    // console.log("Selected game: ", game);
+    const isFavorite = favorites.includes(game.id);
     let updatedFavorites = [...favorites];
 
     if (isFavorite) {
-      updatedFavorites = favorites.filter((id) => id !== gameId.id);
+      updatedFavorites = favorites.filter((id) => id !== game.id);
     } else {
-      updatedFavorites.push(gameId.id);
+      updatedFavorites.push(game.id);
+    }
+
+    const existingCartItem = card.find((item) => item.game.id === game.id);
+    if (existingCartItem) {
+      const updatedCard = card.map((item) => {
+        if (item.game.id === game.id) {
+          return { ...item, quantity: item.quantity + 1 };
+        }
+        return item;
+      });
+      setCard(updatedCard);
+    } else {
+      setCard([...card, { id: game.id, game: game, quantity: 1, price: game.price }]);
     }
 
     setFavorites(updatedFavorites);
   };
+
+
 
   const isGameSelected = (gameId) => {
     return favorites.includes(gameId);
@@ -66,18 +77,23 @@ export default function Navbar() {
     game.title.toLowerCase().includes(searchText.toLowerCase())
   );
 
-  function handleUpdateCartItemQuantity(gameId, amount) {
-    const updatedFavorites = card.map((item) => {
-      if (item.id === gameId) {
-        const selectedGame = games.find((game) => game.id === gameId);
+  const handleUpdateCartItemQuantity = (gameId, amount) => {
+    // console.log("Updating cart item quantity for game:", gameId, "with amount:", amount);
+    const updatedCard = card.map((item) => {
+      if (item.game.id === gameId) {
+        // console.log("Found matching item in cart:", item);
+        const selectedGame = games.find((game) => game.id === item.game.id);
         const newQuantity = item.quantity + amount;
-        const newPrice = newQuantity * selectedGame.price;
-        return { ...item, quantity: newQuantity, price: newPrice };
+        const nonNegativeQuantity = Math.max(newQuantity, 0);
+        const newPrice = nonNegativeQuantity * selectedGame.price;
+        // console.log("New quantity:", nonNegativeQuantity, "New price:", newPrice);
+        return { ...item, quantity: nonNegativeQuantity, price: newPrice, title: selectedGame.title };
       }
       return item;
     });
 
-    setCard(updatedFavorites);
+    // console.log("Updated cart:", updatedCard);
+    setCard(updatedCard);
   };
 
   const handleClearCart = () => {
@@ -323,7 +339,7 @@ export default function Navbar() {
           </span>
           {/* Checkout */}
           <span
-            className="text-sm text-gray-100 mt-2 flex items-center hover:text-orange-600"
+            className="text-sm text-gray-100 mt-2 flex items-center hover:underline"
             onClick={() => document.getElementById("my_modal_5").showModal()}
           >
             <ShoppingCartIcon className="h-5 w-5 mr-1 text-orange-600" />
@@ -341,7 +357,7 @@ export default function Navbar() {
                     key={item.id}
                     className="flex justify-between items-center w-full py-1 border-b border-gray-700"
                   >
-                    <span className="text-sm text-white">{item.title}</span>
+                    <span className="text-sm text-white">{item.game.title}</span>
                     <div className="flex-grow"></div> {/* Platzhalter, um den Raum zwischen title und price zu füllen */}
                     <span className="text-sm text-white mr-3">{item.price.toFixed(2)} Euro</span>
                     <div className="flex gap-2 items-center">
@@ -366,8 +382,11 @@ export default function Navbar() {
                       </button>
                     </div>
                   </div>
-                ))
-                : "Cart is empty"}
+                )) :
+                < div className="flex justify-center items-center text-white">
+                  Cart is empty
+                </div>
+              }
             </div>
             <div className="modal-action mt-4 flex justify-end">
               <form method="dialog">
