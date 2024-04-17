@@ -1,4 +1,3 @@
-// Update 17.04.2024 21:10
 import { Carousel } from "@material-tailwind/react";
 
 export default function Main() {

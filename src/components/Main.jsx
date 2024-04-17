@@ -1,4 +1,3 @@
-// Update 17.04.2024 21:10
 import { useState, useEffect } from "react";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";

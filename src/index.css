@@ -1,4 +1,3 @@
-/* Update 17.04.2024 21:10 */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @tailwind base;
 @tailwind components;
@@ -19,7 +18,7 @@
     font-family: 'Press Start 2P';
 }
 
-/* Hide Elements (Mobile Navbar */
+/* Um Elemente der Navbar zu verstecken */
 .hidden {
     display: none;
 }
