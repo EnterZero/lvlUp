@@ -135,7 +135,7 @@ export default function Navbar() {
                     className="h-8 w-auto"
                     src="../images/flask.png"
                     alt="LevelUp"
-                  /><span className="text-orange-600 text-xl font hidden">Level-Up</span>
+                  /><span className="text-orange-600 text-xl font hidden md:inline">Level-Up</span>
                 </div>
                 {/* Navbar links */}
                 <div className="hidden sm:ml-6 sm:block">
